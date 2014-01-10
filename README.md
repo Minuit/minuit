@@ -12,10 +12,10 @@ We define a namespace as a tree-structure of OSC addresses, sorted in nodes bind
 ###Syntax
 *It has been decided that queries and replies should be separated from the address for optimization’s sake.
 The type of message is then possible to filter based on tree specific characters into the first word of the message :
-	* a slash at start (**/**) indicates an OSC “standard“ command to the specified address (this includes addressing attributes)
-	* a question mark (**?**) indicates a query.
-	* a colon (**:**) indicates a reply to a query, and duplicates the query’s syntax (colon is also used further to separate attributes from address)
-	* a exclamation mark (**!**) indicates an error.
+	* a slash at start (/) indicates an OSC “standard“ command to the specified address (this includes addressing attributes)
+	* a question mark (?) indicates a query.
+	* a colon (:) indicates a reply to a query, and duplicates the query’s syntax (colon is also used further to separate attributes from address)
+	* a exclamation mark (!) indicates an error.
 
 *It turns out that the namespace can be handle using 4 differents operations :
 	* discovering (using **namespace**) : asks for the names of nodes and the types of objects on the next tree-structure level. The request allows also to get the attributes at the current tree-structure level.
@@ -25,10 +25,13 @@ an object in the tree.
 	* listening (using **listen**) : enable or disable listening of the value of a particular attribute of an object in the tree. When a listening is enabled, the value would be sent as a reply to the application which ask for.
 
 Hereafter we consider an application A (IP, port) and an application B (IP, port) which knows themself on an the network.
+~~~
 B would talk to A like that :
 B?operation /whereTo ... (the rest depends on the operation)
+
 A would replies to B using :
 A:operation /whereTo ... (the rest depends on the operation)
+~~~
 
 ###Discovering
 ~~~
