@@ -97,7 +97,7 @@ Jamoma:get /filter/gain:rangeBounds 0 127
 ~~~
 
 ~~~
-i-score?listen /filter/gain 
+i-score?listen /filter/gain enable
 Jamoma:listen /filter/gain:value 53 
 Jamoma:listen /filter/gain:value 54 
 Jamoma:listen /filter/gain:value 55
