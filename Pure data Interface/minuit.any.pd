@@ -94,8 +94,8 @@
 #X obj 13 12 cnv 15 75 42 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X text 14 34 "value";
-#X obj 17 10 cnv 15 100 15 empty \$0-name-cnv / 0 7 0 14 -262144 -66577
-0;
+#X obj 17 10 cnv 15 100 15 empty \$0-name-cnv /node2/subthing1/subsub/troncol
+0 7 0 14 -262144 -66577 0;
 #X obj 8 77 cnv 15 350 65 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X text 59 34 (enter edit-mode to edit \, then send);
@@ -113,7 +113,6 @@
 #X restore 26 397 pd \$0-edit;
 #X obj 97 131 r \$0-value;
 #X obj 75 218 s \$0-value;
-#X obj 252 101 sel value type;
 #X text 219 17 arguments: name type;
 #X obj 253 56 r /\$1-get;
 #X obj 51 138 r /\$1;
@@ -122,6 +121,10 @@
 #X obj 63 313 cnv 15 110 15 empty empty empty 20 12 0 14 -258113 -66577
 0;
 #X text 64 311 this needs zexy !!;
+#X msg 475 200 parameter;
+#X obj 436 156 t b b b;
+#X msg 454 178 service;
+#X obj 252 101 sel value type service;
 #X connect 0 0 19 0;
 #X connect 1 0 18 0;
 #X connect 3 0 4 0;
@@ -139,16 +142,22 @@
 #X connect 15 0 16 1;
 #X connect 16 0 14 0;
 #X connect 17 0 11 0;
-#X connect 17 1 29 0;
+#X connect 17 1 28 0;
 #X connect 17 2 6 0;
 #X connect 18 0 17 0;
-#X connect 18 1 24 0;
-#X connect 19 0 28 0;
+#X connect 18 1 34 0;
+#X connect 19 0 27 0;
 #X connect 19 1 23 0;
 #X connect 22 0 4 1;
-#X connect 24 0 17 0;
-#X connect 24 1 12 0;
-#X connect 26 0 18 0;
-#X connect 27 0 4 0;
-#X connect 28 0 20 0;
-#X connect 29 0 11 1;
+#X connect 25 0 18 0;
+#X connect 26 0 4 0;
+#X connect 27 0 20 0;
+#X connect 28 0 11 1;
+#X connect 31 0 11 2;
+#X connect 32 0 11 0;
+#X connect 32 1 33 0;
+#X connect 32 2 31 0;
+#X connect 33 0 11 1;
+#X connect 34 0 17 0;
+#X connect 34 1 12 0;
+#X connect 34 2 32 0;
