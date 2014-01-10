@@ -1,7 +1,7 @@
 Minuit
 ======
 
-Propositions for a post-OSC prototypal protocol.
+**Propositions for a post-OSC prototypal protocol**
 
 We propose some specifications for a query system based on OSC, coined here Minuit.
 It has been discussed and refined by the protocol workgroup of the Virage platform on november 26th 2008.
@@ -31,21 +31,29 @@ A would replies to B using :
 A:operation /whereTo ... (the rest depends on the operation)
 
 ###Discovering
+~~~
 B?namespace /WhereToDiscover
 A:namespace /WhereToDiscover ObjectType nodes={ name1 name2 ...} attributes={ attributes of the object under the whereToDiscover node }
+~~~
 
 Important note : considering the genericity of this approach any types and attributes can be shared using this exchange format. However, to ensure interoperability between systems, we have to define standard object types and attributes (see below for a proposition of attributes name).
 
 ###Getting
-B?get /WhereToGet:attribute A:get /WhereToGet:attribute value
+~~~
+B?get /WhereToGet:attribute 
+A:get /WhereToGet:attribute value
+~~~
 
 ###Setting
+~~~
 /WhereToSet value (this is standard OSC) no reply from A.
+~~~
 
 ###Listening
+~~~
 B?listen /WhereToListen:attribute enable (turn on the listening) B?listen /WhereToListen:attribute disable (turn off the listening)
-A:listen /WhereToListen:attribute value
-(each time the attribute change if the listening is turned on)
+A:listen /WhereToListen:attribute value (each time the attribute change if the listening is turned on)
+~~~
 
 ###Object types
 There are 4 types of objects : 
@@ -57,7 +65,7 @@ There are 4 types of objects :
 ###Data Attributes
 There are many attributes for the Data object. Here is a first overview :
 * **value** : the value attribute is implicitly linked to the address, and then can be ommitted.
-* **:type** : the possible types are : integer, decimal, string, anything, boolean, none, enum (a.k.a. enumerated list), array (a.k.a list).
+* **type** : the possible types are : integer, decimal, string, anything, boolean, none, enum (a.k.a. enumerated list), array (a.k.a list).
 * **service**
 what kind of access the value provides : parameter (read+write), message (write), return (read).
 * **priority** : this a number used to order the setting of several object values in the same time. Smaller the number is the later it would receive the value. 0 means this object don’t care about order.
