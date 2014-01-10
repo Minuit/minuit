@@ -10,19 +10,19 @@ It has been discussed and refined by the protocol workgroup of the Virage platfo
 We define a namespace as a tree-structure of OSC addresses, sorted in nodes binding on objects which have attributes.
 
 ###Syntax
-*It has been decided that queries and replies should be separated from the address for optimization’s sake.
+It has been decided that queries and replies should be separated from the address for optimization’s sake.
 The type of message is then possible to filter based on tree specific characters into the first word of the message :
-	* a slash at start (/) indicates an OSC “standard“ command to the specified address (this includes addressing attributes)
-	* a question mark (?) indicates a query.
-	* a colon (:) indicates a reply to a query, and duplicates the query’s syntax (colon is also used further to separate attributes from address)
-	* a exclamation mark (!) indicates an error.
+* a slash at start (/) indicates an OSC “standard“ command to the specified address (this includes addressing attributes)
+* a question mark (?) indicates a query.
+* a colon (:) indicates a reply to a query, and duplicates the query’s syntax (colon is also used further to separate attributes from address)
+* a exclamation mark (!) indicates an error.
 
-*It turns out that the namespace can be handle using 4 differents operations :
-	* discovering (using **namespace**) : asks for the names of nodes and the types of objects on the next tree-structure level. The request allows also to get the attributes at the current tree-structure level.
-	* getting (using **get**) : gets the value of a particular attribute in an object.
-	* setting (using the standard OSC style) : sets the value of a particular attribute of
+It turns out that the namespace can be handle using 4 differents operations :
+* discovering (using **namespace**) : asks for the names of nodes and the types of objects on the next tree-structure level. The request allows also to get the attributes at the current tree-structure level.
+* getting (using **get**) : gets the value of a particular attribute in an object.
+* setting (using the standard OSC style) : sets the value of a particular attribute of
 an object in the tree.
-	* listening (using **listen**) : enable or disable listening of the value of a particular attribute of an object in the tree. When a listening is enabled, the value would be sent as a reply to the application which ask for.
+* listening (using **listen**) : enable or disable listening of the value of a particular attribute of an object in the tree. When a listening is enabled, the value would be sent as a reply to the application which ask for.
 
 Hereafter we consider an application A (IP, port) and an application B (IP, port) which knows themself on an the network.
 ~~~
@@ -54,7 +54,9 @@ A:get /WhereToGet:attribute value
 
 ###Listening
 ~~~
-B?listen /WhereToListen:attribute enable (turn on the listening) B?listen /WhereToListen:attribute disable (turn off the listening)
+B?listen /WhereToListen:attribute enable (turn on the listening) 
+B?listen /WhereToListen:attribute disable (turn off the listening)
+
 A:listen /WhereToListen:attribute value (each time the attribute change if the listening is turned on)
 ~~~
 
