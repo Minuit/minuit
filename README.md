@@ -84,7 +84,7 @@ Below is an example of dialog between 2 environments. In this case, this is the 
 i-score?namespace /
 Jamoma:namespace / Application nodes={ filter input recorder } attributes={ debug version type name author }
 i-score?namespace /filter
-Jamoma:namespace /filter nodes={ gain q } types={ Data Data } attributes={ tag service description priority }
+Jamoma:namespace /filter Data nodes={ gain q } attributes={ tag service description priority }
 i-score?namespace /filter/gain
 Jamoma:namespace /filter/gain attributes={ rangeBounds service active tag type repetitionsFilter description priority valueDefault value }
 ~~~
