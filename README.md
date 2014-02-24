@@ -24,7 +24,7 @@ It turns out that the namespace can be handle using 4 differents operations :
 an object in the tree.
 * listening (using **listen**) : enable or disable listening of the value of a particular attribute of an object in the tree. When a listening is enabled, the value would be sent as a reply to the application which ask for.
 
-Hereafter we consider an application A (IP, port) and an application B (IP, port) which knows themself on an the network.
+Hereafter we consider an application A (IP, port) and an application B (IP, port) which are aware of each other’s existence on a network.
 ~~~
 B would talk to A like that :
 B?operation /whereTo ... (the rest depends on the operation)
@@ -73,7 +73,7 @@ There are many attributes for the Data object. Here is a first overview :
 * **type** : the possible types are : integer, decimal, string, anything, boolean, none, enum (a.k.a. enumerated list), array (a.k.a list).
 * **service**
 what kind of access the value provides : parameter (read+write), message (write), return (read).
-* **priority** : this a number used to order the setting of several object values in the same time. Smaller the number is the later it would receive the value. 0 means this object don’t care about order.
+* **priority** : this a number used to order the setting of several object values in the same time. Smaller the number is the sooner it would receive the value. 0 means this object don’t care about order.
 * **rangeBounds** : an array of two values of the specified type.
 * **description** : textual description of what is the Data for.
 
