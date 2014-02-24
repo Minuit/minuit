@@ -70,7 +70,7 @@ There are 4 types of objects :
 ###Data Attributes
 There are many attributes for the Data object. Here is a first overview :
 * **value** : the value attribute is implicitly linked to the address, and then can be ommitted.
-* **type** : the possible types are : integer, decimal, string, anything, boolean, none, enum (a.k.a. enumerated list), array (a.k.a list).
+* **type** : the possible types are : integer, decimal, string, generic, boolean, none, array.
 * **service**
 what kind of access the value provides : parameter (read+write), message (write), return (read).
 * **priority** : this a number used to order the setting of several object values in the same time. Smaller the number is the later it would receive the value. 0 means this object don’t care about order.
