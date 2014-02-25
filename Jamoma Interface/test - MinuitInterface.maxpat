@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 14.0, 44.0, 794.0, 556.0 ],
+		"rect" : [ 1.0, 44.0, 794.0, 556.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 659.0, 10.0, 76.0, 20.0 ],
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -51,8 +65,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 629.5, 448.0, 60.0, 60.0 ],
-					"presentation_rect" : [ 374.0, 431.0, 0.0, 0.0 ]
+					"patching_rect" : [ 629.5, 448.0, 60.0, 60.0 ]
 				}
 
 			}
@@ -402,11 +415,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 18.0,
 					"id" : "obj-1",
+					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 660.5, 9.0, 128.0, 27.0 ],
-					"text" : "MinuitInterface"
+					"patching_rect" : [ 659.0, 36.5, 131.0, 47.0 ],
+					"text" : "MinuitInterface MinuitDevice1"
 				}
 
 			}
@@ -564,31 +578,40 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.module.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "MinuitInterface.maxpat",
-				"bootpath" : "/Users/WALL-E/Dropbox/Iscore/Minuit v0.2/jamoma",
+				"bootpath" : "/Users/WALL-E/Documents/minuit/Jamoma Interface",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -596,112 +619,112 @@
 , 			{
 				"name" : "input~.module.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.fileLoader.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/fileLoader",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/fileLoader",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/components/fileLoader",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.thru.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.module.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.view.maxpat",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.js_systeminfo.js",
 				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../Documents/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "",
 				"bootpath" : "/",
-				"patcherrelativepath" : "../../../../../..",
+				"patcherrelativepath" : "../../../../..",
 				"type" : "fold",
 				"implicit" : 1
 			}

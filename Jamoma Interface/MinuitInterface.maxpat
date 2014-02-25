@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 13.0, 46.0, 556.0, 240.0 ],
+		"rect" : [ 316.0, 44.0, 556.0, 240.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"annotation" : "print activity in console (0 / 1)",
+					"comment" : "",
+					"hint" : "",
+					"id" : "obj-6",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 188.5, 16.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -66,7 +80,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.5, 161.0, 154.0, 31.0 ],
-					"text" : "protocol/setup ip localhost, protocol/setup port 8002"
+					"text" : "protocol/setup ip localhost, protocol/setup port 13579"
 				}
 
 			}
@@ -95,18 +109,6 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 8.5, 137.0, 60.0, 20.0 ],
 					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-36",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 188.5, 26.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -188,7 +190,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 8.5, 83.0, 219.0, 20.0 ],
-					"text" : "j.modular Minuit @name MinuitDevice1"
+					"text" : "j.modular Minuit @name #1"
 				}
 
 			}
@@ -257,15 +259,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-36", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -284,10 +277,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-36", 0 ],
+					"destination" : [ "obj-32", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -299,15 +292,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.modular.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
