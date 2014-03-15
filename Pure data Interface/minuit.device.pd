@@ -86,7 +86,7 @@
 #X obj 13 36 t b b b;
 #N canvas 23 34 229 165 \$0-inside 0;
 #X obj 10 50 s \$0-dumpOSC;
-#X obj 10 10 dumpOSC 10001;
+#X obj 10 10 dumpOSC 9998;
 #X connect 1 0 0 0;
 #X restore 142 23 pd \$0-inside;
 #X obj 102 215 s pd-\$0-inside;
@@ -114,7 +114,7 @@
 #X connect 15 0 0 0;
 #X connect 16 0 2 0;
 #X restore 60 18 pd \$0-dumpOSC;
-#N canvas 856 623 302 195 \$0-to-Minuit 0;
+#N canvas 962 771 302 195 \$0-to-Minuit 1;
 #X obj 88 158 sendOSC;
 #X msg 97 77 disconnect;
 #X obj 88 8 loadbang;
@@ -132,7 +132,7 @@
 #X obj 41 200 outlet;
 #X obj 41 73 symbol \$3;
 #X obj 134 61 f \$4;
-#X msg 134 104 8002;
+#X msg 134 105 13579;
 #X connect 0 0 3 0;
 #X connect 1 0 10 0;
 #X connect 1 1 4 1;
