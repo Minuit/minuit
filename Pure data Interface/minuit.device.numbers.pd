@@ -11,8 +11,8 @@
 #X obj 71 236 minuit.num /node1/subnode2/control 11 float 0 127;
 #X obj 73 268 - 0.1;
 #X obj 66 200 + 0.1;
-#X obj 423 69 i-score.transport;
-#X obj 422 23 minuit.device 9998;
+#X obj 327 155 i-score.transport;
+#X obj 326 109 minuit.device MinuitDevice1 9998;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 2 0 0 0;

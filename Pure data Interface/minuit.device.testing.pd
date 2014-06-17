@@ -1,4 +1,4 @@
-#N canvas 455 22 574 437 10;
+#N canvas 243 97 574 437 10;
 #X obj 33 4 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X floatatom 31 142 5 0 0 0 - - -;
@@ -22,7 +22,7 @@
 #X obj 176 189 minuit.num /node2/subthing2/subsub/marap 44 float 0
 127;
 #X obj 71 289 minuit.num /node1/subnode2/control 11 float 0 127;
-#X obj 389 24 minuit.device 9998;
+#X obj 355 9 minuit.device MinuitDevice1 9998;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 2 0 0 0;
