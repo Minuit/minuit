@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
@@ -54,7 +54,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -80,13 +80,71 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-31",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 209.0, 323.0, 214.0, 20.0 ],
+									"text" : "or a list of  available Trigger Points"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.500743, 0.500743, 0.500743, 1.0 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-27",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 6.0, 322.0, 107.0, 18.0 ],
+									"text" : "/Main:Next 0 1 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-5",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 209.0, 304.0, 214.0, 20.0 ],
+									"text" : "trigger next available Trigger Point"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.500743, 0.500743, 0.500743, 1.0 ],
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 6.0, 301.0, 107.0, 18.0 ],
+									"text" : "/Main:Next"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-74",
 									"maxclass" : "toggle",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 189.0, 555.0, 20.0, 20.0 ]
+									"patching_rect" : [ 189.0, 561.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -98,7 +156,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 189.0, 535.0, 20.0, 20.0 ]
+									"patching_rect" : [ 189.0, 541.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -110,7 +168,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 189.0, 515.0, 20.0, 20.0 ]
+									"patching_rect" : [ 189.0, 521.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -123,8 +181,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 555.0, 214.0, 20.0 ],
-									"text" : "observe the any box position"
+									"patching_rect" : [ 209.0, 561.0, 214.0, 20.0 ],
+									"text" : "observe any box's position"
 								}
 
 							}
@@ -137,8 +195,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 535.0, 214.0, 20.0 ],
-									"text" : "observe the any box date (ms)"
+									"patching_rect" : [ 209.0, 541.0, 214.0, 20.0 ],
+									"text" : "observe  any box's date (ms)"
 								}
 
 							}
@@ -151,8 +209,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 515.0, 214.0, 20.0 ],
-									"text" : "observe the main scenario position"
+									"patching_rect" : [ 209.0, 521.0, 214.0, 20.0 ],
+									"text" : "observe the main scenario's position"
 								}
 
 							}
@@ -165,8 +223,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 495.0, 214.0, 20.0 ],
-									"text" : "observe the main scenario date (ms)"
+									"patching_rect" : [ 209.0, 501.0, 214.0, 20.0 ],
+									"text" : "observe the main scenario's date (ms)"
 								}
 
 							}
@@ -184,7 +242,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
@@ -618,7 +676,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 27.25, 523.0, 126.5, 20.0 ],
+									"patching_rect" : [ 27.25, 544.0, 126.5, 20.0 ],
 									"saved_object_attributes" : 									{
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
@@ -644,7 +702,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 189.0, 495.0, 20.0, 20.0 ]
+									"patching_rect" : [ 189.0, 501.0, 20.0, 20.0 ]
 								}
 
 							}
@@ -658,7 +716,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 6.0, 468.0, 169.0, 20.0 ],
+									"patching_rect" : [ 6.0, 501.0, 169.0, 20.0 ],
 									"text" : "Observe i-score execution"
 								}
 
@@ -672,7 +730,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 443.0, 214.0, 20.0 ],
+									"patching_rect" : [ 209.0, 472.0, 214.0, 20.0 ],
 									"text" : "same features for any box in a box"
 								}
 
@@ -686,7 +744,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 423.0, 214.0, 20.0 ],
+									"patching_rect" : [ 209.0, 452.0, 214.0, 20.0 ],
 									"text" : "set speed of any box"
 								}
 
@@ -700,7 +758,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 381.0, 214.0, 20.0 ],
+									"patching_rect" : [ 209.0, 410.0, 214.0, 20.0 ],
 									"text" : "stop any box execution"
 								}
 
@@ -714,7 +772,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 361.0, 214.0, 20.0 ],
+									"patching_rect" : [ 209.0, 390.0, 214.0, 20.0 ],
 									"text" : "resume any box execution"
 								}
 
@@ -728,7 +786,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 341.0, 214.0, 20.0 ],
+									"patching_rect" : [ 209.0, 370.0, 214.0, 20.0 ],
 									"text" : "pause any box execution"
 								}
 
@@ -742,7 +800,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.0, 321.0, 214.0, 20.0 ],
+									"patching_rect" : [ 209.0, 350.0, 214.0, 20.0 ],
 									"text" : "launch any box execution"
 								}
 
@@ -760,11 +818,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 1370.0, 747.0, 253.0, 224.0 ],
+										"rect" : [ 1139.0, 580.0, 206.0, 146.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -783,22 +841,7 @@
 										"description" : "",
 										"digest" : "",
 										"tags" : "",
-										"visible" : 1,
 										"boxes" : [ 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-1",
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 37.0, 170.0, 18.0 ],
-													"text" : "test?listen /Main:date"
-												}
-
-											}
-, 											{
 												"box" : 												{
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
@@ -807,7 +850,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 185.0, 170.0, 18.0 ],
+													"patching_rect" : [ 18.0, 110.0, 170.0, 18.0 ],
 													"text" : "/Box.3/Start:Trigger"
 												}
 
@@ -821,7 +864,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 160.0, 170.0, 18.0 ],
+													"patching_rect" : [ 18.0, 85.0, 170.0, 18.0 ],
 													"text" : "/Box.1/Scenario"
 												}
 
@@ -835,7 +878,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 137.0, 170.0, 18.0 ],
+													"patching_rect" : [ 18.0, 62.0, 170.0, 18.0 ],
 													"text" : "/Box.1/Scenario"
 												}
 
@@ -849,7 +892,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 113.0, 170.0, 18.0 ],
+													"patching_rect" : [ 18.0, 38.0, 170.0, 18.0 ],
 													"text" : "/Box.1/Automation.1"
 												}
 
@@ -863,22 +906,8 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 89.0, 170.0, 18.0 ],
+													"patching_rect" : [ 18.0, 14.0, 170.0, 18.0 ],
 													"text" : "/Box.1/Automation"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-56",
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 15.0, 15.0, 170.0, 18.0 ],
-													"text" : "test?listen /Main:position"
 												}
 
 											}
@@ -914,7 +943,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 6.0, 401.0, 50.0, 20.0 ]
+									"patching_rect" : [ 6.0, 430.0, 50.0, 20.0 ]
 								}
 
 							}
@@ -928,7 +957,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 6.0, 423.0, 107.0, 18.0 ],
+									"patching_rect" : [ 6.0, 452.0, 107.0, 18.0 ],
 									"text" : "/Box.2:speed $1"
 								}
 
@@ -1140,7 +1169,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 6.0, 443.0, 107.0, 18.0 ],
+									"patching_rect" : [ 6.0, 472.0, 107.0, 18.0 ],
 									"text" : "/Box.3/Box.4:Start"
 								}
 
@@ -1183,7 +1212,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 6.0, 361.0, 107.0, 18.0 ],
+									"patching_rect" : [ 6.0, 390.0, 107.0, 18.0 ],
 									"text" : "/Box.2:Resume"
 								}
 
@@ -1197,7 +1226,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 6.0, 341.0, 107.0, 18.0 ],
+									"patching_rect" : [ 6.0, 370.0, 107.0, 18.0 ],
 									"text" : "/Box.2:Pause"
 								}
 
@@ -1211,7 +1240,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 6.0, 381.0, 107.0, 18.0 ],
+									"patching_rect" : [ 6.0, 410.0, 107.0, 18.0 ],
 									"text" : "/Box.2:End"
 								}
 
@@ -1310,7 +1339,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 6.0, 321.0, 107.0, 18.0 ],
+									"patching_rect" : [ 6.0, 350.0, 107.0, 18.0 ],
 									"text" : "/Box.2:Start"
 								}
 
@@ -1454,10 +1483,28 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -1623,8 +1670,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 135.0, 128.0, 278.0, 20.0 ],
-					"text" : "send 0/1 to disable/enable"
+					"patching_rect" : [ 124.0, 128.0, 278.0, 20.0 ],
+					"text" : "send 0/1 to disable/enable network monitoring"
 				}
 
 			}
@@ -1694,7 +1741,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 581.0, 556.0, 50.0, 20.0 ]
+					"patching_rect" : [ 581.0, 583.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -1712,7 +1759,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -1824,7 +1871,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 581.0, 526.0, 173.0, 20.0 ],
+					"patching_rect" : [ 581.0, 553.0, 173.0, 20.0 ],
 					"text" : "j.receive /deg/bitdepth"
 				}
 
@@ -1895,7 +1942,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 511.0, 520.0, 60.0, 60.0 ]
+					"patching_rect" : [ 511.0, 547.0, 60.0, 60.0 ]
 				}
 
 			}
@@ -1908,7 +1955,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 511.0, 491.0, 173.0, 20.0 ],
+					"patching_rect" : [ 511.0, 518.0, 173.0, 20.0 ],
 					"text" : "j.receive /in/soundfile/report"
 				}
 
@@ -1919,11 +1966,11 @@
 					"id" : "obj-15",
 					"maxclass" : "bpatcher",
 					"name" : "output~.module.maxpat",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 504.0, 305.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"patching_rect" : [ 504.0, 332.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 				}
 
 			}
@@ -1936,8 +1983,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 504.0, 56.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"patching_rect" : [ 504.0, 56.0, 300.0, 175.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
 				}
 
 			}
@@ -1970,7 +2017,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
@@ -2248,8 +2295,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 504.0, 219.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ]
+					"patching_rect" : [ 504.0, 246.0, 150.0, 70.0 ],
+					"presentation_rect" : [ 15.0, 15.0, 150.0, 70.0 ]
 				}
 
 			}
@@ -2383,137 +2430,173 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-13::obj-1::obj-45" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-15::obj-1::obj-100" : [ "live.text[8]", "live.text[1]", 0 ],
+			"obj-13::obj-1::obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-13::obj-1::obj-1::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-13::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-13::obj-1::obj-4" : [ "live.text[7]", "live.text[1]", 0 ],
+			"obj-15::obj-1::obj-107" : [ "live.dial[5]", "Preamp", 0 ],
+			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-15::obj-1::obj-106" : [ "live.dial[4]", "Release", 0 ],
+			"obj-15::obj-1::obj-108" : [ "live.text[12]", "live.text[4]", 0 ],
+			"obj-13::obj-1::obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-13::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-13::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-13::obj-1::obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-13::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-13::obj-1::obj-74" : [ "live.dial[2]", "Transpose", 0 ],
+			"obj-13::obj-1::obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-15::obj-1::obj-98" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-13::obj-1::obj-1::obj-13" : [ "Release", "Release", 0 ],
+			"obj-13::obj-1::obj-24" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-15::obj-1::obj-82" : [ "pan[1]", "Pan", 0 ],
+			"obj-13::obj-1::obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-13::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-15::obj-1::obj-90" : [ "live.text[11]", "live.text[1]", 0 ],
+			"obj-15::obj-1::obj-53" : [ "Master Gain[1]", "Master Gain", 0 ],
+			"obj-15::obj-1::obj-110" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-13::obj-1::obj-1::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-13::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-15::obj-1::obj-102" : [ "live.text[10]", "live.text", 0 ],
+			"obj-15::obj-1::obj-104" : [ "live.dial[3]", "Depth", 0 ],
+			"obj-15::obj-1::obj-97" : [ "live.numbox[6]", "CPU", 0 ],
+			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-13::obj-1::obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-13::obj-1::obj-58" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-15::obj-1::obj-103" : [ "live.text[9]", "live.text", 0 ],
+			"obj-15::obj-1::obj-99" : [ "live.menu[3]", "live.menu[2]", 0 ],
+			"obj-13::obj-1::obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-15::obj-1::obj-111" : [ "live.numbox[4]", "live.numbox[2]", 0 ],
+			"obj-13::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-13::obj-1::obj-59" : [ "live.text[3]", "live.text[3]", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/degrade~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "MinuitInterface.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/minuit/Jamoma Interface",
+				"bootpath" : "/Users/bltzr/dev/Minuit/Jamoma Interface",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.view.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/input~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.fileLoader.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/fileLoader",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/components/fileLoader",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.thru.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/balance~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "saturation~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/saturation~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "balance~.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "output~.module.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "output~.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "saturation~.model.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/output~",
+				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../Jamoma/Implementations/Max/Jamoma/javascript",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -2564,15 +2647,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.textslider.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2581,10 +2668,6 @@
 			}
 , 			{
 				"name" : "j.dataspace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -2597,14 +2680,6 @@
 			}
 , 			{
 				"name" : "j.overdrive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
  ]
