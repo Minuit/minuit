@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -36,7 +36,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 191.0, 401.0, 20.0 ],
+					"patching_rect" : [ 26.0, 211.0, 401.0, 20.0 ],
 					"text" : "(optionnal) Argument #2: listening port of your  application (default : 9998)"
 				}
 
@@ -54,7 +54,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -242,7 +242,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -818,7 +818,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1684,7 +1684,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 192.0, 159.5, 298.0, 20.0 ],
+					"patching_rect" : [ 163.0, 168.0, 270.0, 20.0 ],
 					"text" : "Argument #1: name of your Jamoma Application "
 				}
 
@@ -1759,7 +1759,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -2017,7 +2017,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -2249,11 +2249,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 18.0,
 					"id" : "obj-1",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 154.5, 168.0, 27.0 ],
-					"text" : "MinuitInterface test"
+					"patching_rect" : [ 26.0, 154.5, 130.0, 47.0 ],
+					"text" : "MinuitInterface MinuitDevice"
 				}
 
 			}
@@ -2431,46 +2432,46 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-1::obj-45" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-15::obj-1::obj-100" : [ "live.text[8]", "live.text[1]", 0 ],
-			"obj-13::obj-1::obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ],
 			"obj-13::obj-1::obj-1::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-13::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-13::obj-1::obj-4" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-15::obj-1::obj-107" : [ "live.dial[5]", "Preamp", 0 ],
-			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-15::obj-1::obj-99" : [ "live.menu[3]", "live.menu[2]", 0 ],
 			"obj-15::obj-1::obj-106" : [ "live.dial[4]", "Release", 0 ],
-			"obj-15::obj-1::obj-108" : [ "live.text[12]", "live.text[4]", 0 ],
-			"obj-13::obj-1::obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-15::obj-1::obj-102" : [ "live.text[10]", "live.text", 0 ],
+			"obj-15::obj-1::obj-97" : [ "live.numbox[6]", "CPU", 0 ],
 			"obj-13::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-13::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-15::obj-1::obj-107" : [ "live.dial[5]", "Preamp", 0 ],
 			"obj-13::obj-1::obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-13::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-13::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-13::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-13::obj-1::obj-74" : [ "live.dial[2]", "Transpose", 0 ],
 			"obj-13::obj-1::obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-15::obj-1::obj-98" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-13::obj-1::obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-13::obj-1::obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
 			"obj-13::obj-1::obj-1::obj-13" : [ "Release", "Release", 0 ],
+			"obj-15::obj-1::obj-103" : [ "live.text[9]", "live.text", 0 ],
+			"obj-15::obj-1::obj-110" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-13::obj-1::obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-13::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-13::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-15::obj-1::obj-100" : [ "live.text[8]", "live.text[1]", 0 ],
 			"obj-13::obj-1::obj-24" : [ "Master Gain", "Master Gain", 0 ],
 			"obj-15::obj-1::obj-82" : [ "pan[1]", "Pan", 0 ],
-			"obj-13::obj-1::obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
-			"obj-13::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-15::obj-1::obj-90" : [ "live.text[11]", "live.text[1]", 0 ],
-			"obj-15::obj-1::obj-53" : [ "Master Gain[1]", "Master Gain", 0 ],
-			"obj-15::obj-1::obj-110" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-15::obj-1::obj-98" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-13::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
 			"obj-13::obj-1::obj-1::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-13::obj-1::obj-82" : [ "pan", "Pan", 0 ],
-			"obj-15::obj-1::obj-102" : [ "live.text[10]", "live.text", 0 ],
+			"obj-13::obj-1::obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-13::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
 			"obj-15::obj-1::obj-104" : [ "live.dial[3]", "Depth", 0 ],
-			"obj-15::obj-1::obj-97" : [ "live.numbox[6]", "CPU", 0 ],
 			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-13::obj-1::obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-15::obj-1::obj-108" : [ "live.text[12]", "live.text[4]", 0 ],
+			"obj-15::obj-1::obj-53" : [ "Master Gain[1]", "Master Gain", 0 ],
 			"obj-13::obj-1::obj-58" : [ "live.text[4]", "live.text[4]", 0 ],
-			"obj-15::obj-1::obj-103" : [ "live.text[9]", "live.text", 0 ],
-			"obj-15::obj-1::obj-99" : [ "live.menu[3]", "live.menu[2]", 0 ],
-			"obj-13::obj-1::obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-13::obj-1::obj-4" : [ "live.text[7]", "live.text[1]", 0 ],
 			"obj-15::obj-1::obj-111" : [ "live.numbox[4]", "live.numbox[2]", 0 ],
-			"obj-13::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-13::obj-1::obj-59" : [ "live.text[3]", "live.text[3]", 0 ]
+			"obj-13::obj-1::obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
+			"obj-15::obj-1::obj-90" : [ "live.text[11]", "live.text[1]", 0 ],
+			"obj-13::obj-1::obj-45" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13::obj-1::obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -2667,7 +2668,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.dataspace.mxo",
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

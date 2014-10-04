@@ -1,10 +1,15 @@
 {
 	"patcher" : 	{
 		"fileversion" : 1,
-		"rect" : [ 638.0, 373.0, 625.0, 383.0 ],
+		"appversion" : 		{
+			"major" : 6,
+			"minor" : 1,
+			"revision" : 8,
+			"architecture" : "x86"
+		}
+,
+		"rect" : [ 1197.0, 363.0, 625.0, 383.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 638.0, 373.0, 625.0, 383.0 ],
-		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
@@ -12,12 +17,16 @@
 		"gridonopen" : 0,
 		"gridsize" : [ 10.0, 10.0 ],
 		"gridsnaponopen" : 0,
+		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -29,10 +38,15 @@
 					"numoutlets" : 0,
 					"patcher" : 					{
 						"fileversion" : 1,
-						"rect" : [ 50.0, 94.0, 640.0, 480.0 ],
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 8,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 50.0, 94.0, 411.0, 187.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 50.0, 94.0, 640.0, 480.0 ],
-						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 9.0,
 						"default_fontface" : 0,
@@ -40,12 +54,16 @@
 						"gridonopen" : 0,
 						"gridsize" : [ 10.0, 10.0 ],
 						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
 						"boxanimatetime" : 200,
 						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -56,8 +74,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 51.0, 129.0, 289.0, 26.0 ],
-									"text" : ";\rmax launchbrowser mailto:fxw@wanadoo.fr?subject=fxwViage2MIDI"
+									"patching_rect" : [ 51.0, 129.0, 289.0, 25.0 ],
+									"text" : ";\rmax launchbrowser mailto:fxw@wanadoo.fr?subject=fxwMinuit2MIDI"
 								}
 
 							}
@@ -77,8 +95,8 @@
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-46", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [  ],
 									"source" : [ "obj-8", 0 ]
 								}
 
@@ -88,13 +106,16 @@
 ,
 					"patching_rect" : [ 550.0, 92.0, 36.0, 17.0 ],
 					"saved_object_attributes" : 					{
-						"fontsize" : 9.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"fontname" : "Arial",
 						"default_fontsize" : 9.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 9.0,
 						"globalpatchername" : "",
-						"fontface" : 0
+						"tags" : ""
 					}
 ,
 					"text" : "p sign"
@@ -144,7 +165,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.113725, 0.105882, 0.184314, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-18",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -173,7 +194,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.113725, 0.105882, 0.184314, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-17",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -206,8 +227,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 270.0, 140.0, 20.0 ],
-					"text" : "udpsend 127.0.0.1 7002"
+					"patching_rect" : [ 21.0, 270.0, 147.0, 20.0 ],
+					"text" : "udpsend 127.0.0.1 13579"
 				}
 
 			}
@@ -230,12 +251,12 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 24.0,
-					"frgb" : [ 0.113725, 0.105882, 0.184314, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-12",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 242.0, 184.0, 99.0, 34.0 ],
+					"patching_rect" : [ 242.0, 184.0, 99.0, 33.0 ],
 					"text" : "MIDI ctrl",
 					"textcolor" : [ 0.113725, 0.105882, 0.184314, 1.0 ]
 				}
@@ -245,6 +266,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
+					"frgb" : 0.0,
 					"id" : "obj-11",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -258,6 +280,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
+					"frgb" : 0.0,
 					"id" : "obj-10",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -271,6 +294,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
+					"frgb" : 0.0,
 					"id" : "obj-7",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -284,7 +308,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.113725, 0.105882, 0.184314, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-6",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -299,7 +323,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
-					"frgb" : [ 0.113725, 0.105882, 0.184314, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-4",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -314,13 +338,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 24.0,
-					"frgb" : [ 0.827451, 0.831373, 0.858824, 1.0 ],
+					"frgb" : 0.0,
 					"id" : "obj-3",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.0, 8.0, 171.0, 34.0 ],
-					"text" : "Virage to MIDI",
+					"patching_rect" : [ 12.0, 8.0, 171.0, 33.0 ],
+					"text" : "Minuit to MIDI",
 					"textcolor" : [ 0.827451, 0.831373, 0.858824, 1.0 ]
 				}
 
@@ -344,13 +368,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 11.595187,
 					"id" : "obj-19",
-					"items" : [ "Gestionnaire IAC Bus IAC 1", ",", "Gestionnaire IAC Bus IAC 2", ",", "Gestionnaire IAC Bus IAC 3", ",", "Gestionnaire IAC Bus IAC 4", ",", "to MaxMSP 1", ",", "to MaxMSP 2" ],
+					"items" : [ "to Max 1", ",", "to Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
-					"patching_rect" : [ 135.0, 148.0, 180.0, 20.0 ],
-					"types" : [  ]
+					"parameter_enable" : 0,
+					"patching_rect" : [ 135.0, 148.0, 180.0, 19.0 ]
 				}
 
 			}
@@ -378,7 +402,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 251.0, 343.0, 265.0, 20.0 ],
-					"text" : "fxwVirage2ctrl moduleB 3 @offset 5 @MIDIch 4"
+					"text" : "fxwMinuit2ctrl moduleB 3 @offset 5 @MIDIch 4"
 				}
 
 			}
@@ -392,7 +416,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 272.0, 279.0, 271.0, 20.0 ],
-					"text" : "fxwVirage2ctrl moduleA 2 @offset 64 @MIDIch 2"
+					"text" : "fxwMinuit2ctrl moduleA 2 @offset 64 @MIDIch 2"
 				}
 
 			}
@@ -445,8 +469,8 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -454,8 +478,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -463,8 +487,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 1 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -472,8 +496,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -481,6 +505,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 225.0, 269.5, 281.5, 269.5 ],
 					"source" : [ "obj-19", 1 ]
@@ -490,6 +515,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 225.0, 334.5, 260.5, 334.5 ],
 					"source" : [ "obj-19", 1 ]
@@ -499,8 +525,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [  ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -508,11 +534,30 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [  ],
 					"source" : [ "obj-23", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "fxwMinuit2ctrl.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Minuit/Max MIDI device interface",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "fxw_interface.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Minuit/Max MIDI device interface",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "OSC-route.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
