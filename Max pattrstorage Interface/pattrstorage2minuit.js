@@ -12,7 +12,7 @@ outlets = 2;
 
 // my Globals
 
-var mynamespace = "MinuitDevice1";
+var mynamespace = "MinuitDevice";
 var mynodes = new Array();
 var myleaves = new Array();
 var out_minuit = 0;
@@ -41,7 +41,7 @@ function from_pattrstorage(chaine)
         clientlist(chaine.replace(/^clientlist /, ""));
     }
     else { // data reception
-        var reponse = "MinuitDevice1:get /" + chaine;
+        var reponse = "MinuitDevice:get /" + chaine;
         outlet(out_minuit, reponse);
     }
 }

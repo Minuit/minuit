@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -402,7 +402,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 129.0, 11.0, 77.0, 20.0 ],
-					"text" : "#1"
+					"text" : "MinuitDevice"
 				}
 
 			}
@@ -535,11 +535,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 47.0, 451.0, 948.0, 506.0 ],
+						"rect" : [ 547.0, 353.0, 948.0, 506.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -627,7 +627,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -764,7 +764,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -942,7 +942,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1088,7 +1088,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1383,7 +1383,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -2012,7 +2012,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 826.0, 5.0, 25.0, 25.0 ]
 								}
 
@@ -2135,8 +2135,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 229.0, 395.0, 140.0, 20.0 ],
-									"text" : "udpsend 127.0.0.1 8002"
+									"patching_rect" : [ 229.0, 395.0, 147.0, 20.0 ],
+									"text" : "udpsend 127.0.0.1 13579"
 								}
 
 							}
@@ -2649,7 +2649,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 181.0, 179.0, 25.0, 25.0 ]
 				}
 
@@ -2936,14 +2936,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "pattrstorage2minuit.js",
-				"bootpath" : "/Users/WALL-E/Documents/minuit/pattrstorage MaxMsp Interface",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
 			}
  ]
 	}
