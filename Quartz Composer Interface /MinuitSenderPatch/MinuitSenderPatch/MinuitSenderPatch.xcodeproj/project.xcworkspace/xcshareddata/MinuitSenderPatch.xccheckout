@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57EF620D-658E-46A0-95DC-0E961747D006</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MinuitSenderPatch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6CA7B8DF-339C-405C-AB5C-3E184F0AC366</key>
+		<string>https://github.com/Minuit/minuit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Quartz Composer Interface /MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6CA7B8DF-339C-405C-AB5C-3E184F0AC366</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Minuit/minuit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6CA7B8DF-339C-405C-AB5C-3E184F0AC366</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6CA7B8DF-339C-405C-AB5C-3E184F0AC366</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Minuit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,649 @@
+TMinuitSenderPatch
+v7
+r0
+t290362075.606215
+cCheck dependencies
+cProcessInfoPlistFile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Info.plist Info.plist
+cCompileXIB /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/English.lproj/Settings.xib
+cProcessPCH++ /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-ebileopnivfgvufwmqvgecpmjvkt/MinuitSenderPatch_Prefix.pch.gch MinuitSenderPatch_Prefix.pch normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
+cProcessPCH++ /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch.gch MinuitSenderPatch_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch.gch MinuitSenderPatch_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatchPlugIn.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSC.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscOutboundPacketStream.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscPrintReceivedElements.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscReceivedElements.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscTypes.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/IpEndpointName.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/NetworkingUtils.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/UdpSocket.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitQCPlugInViewController.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSCMsg.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/MacOS/MinuitSenderPatch normal x86_64
+cTouch /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004AB44D2500000000000000EE
+t1253330213
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/OpenGL.framework/Headers/CGLMacro.h
+c000000004702C63B000000000001EC60
+t1191364155
+s126048
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Quartz.framework/Headers/Quartz.h
+c0000000047BB1D140000000000000100
+t1203445012
+s256
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/assert.h
+c0000000047BA99300000000000000DCB
+t1203411248
+s3531
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/errno.h
+c0000000047BA993000000000000003EB
+t1203411248
+s1003
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/math.h
+c0000000047BA987000000000000004B7
+t1203411056
+s1207
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/netdb.h
+c00000000464386E20000000000002F2B
+t1178830562
+s12075
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/netinet/in.h
+c0000000047E883C30000000000005346
+t1206420419
+s21318
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/pthread.h
+c0000000047BA9932000000000000380F
+t1203411250
+s14351
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/signal.h
+c0000000047BA993100000000000014F0
+t1203411249
+s5360
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
+c0000000047BA99310000000000002A79
+t1203411249
+s10873
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/string.h
+c0000000047BA99320000000000001731
+t1203411250
+s5937
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/socket.h
+c0000000047E883D1000000000000559B
+t1206420433
+s21915
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/time.h
+c0000000047E883D20000000000001E18
+t1206420434
+s7704
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/types.h
+c0000000047E883D2000000000000290F
+t1206420434
+s10511
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/unistd.h
+c0000000047BA993200000000000053FF
+t1203411250
+s21503
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/System/Library/Frameworks/Quartz.framework/Quartz
+c000000004A1249D4000000000000A5F0
+t1242712532
+s42480
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/English.lproj/Settings.xib
+c000000004A1107EA000000000000E8FC
+t1242630122
+s59644
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.h
+c000000004A111EB1000000000000023F
+t1242635953
+s575
+i<Cocoa/Cocoa.h>
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m
+c000000004A111EB1000000000000110E
+t1242635953
+s4366
+i"MinuitQCPlugInViewController.h"
+i"MinuitSenderPatchPlugIn.h"
+i"OSCMsg.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.h
+c000000004A0FE65F0000000000000489
+t1242555999
+s1161
+i<Quartz/Quartz.h>
+i"MinuitQCPlugInViewController.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm
+c000000004A1101DF0000000000001A4B
+t1242628575
+s6731
+i<OpenGL/CGLMacro.h>
+i"MinuitSenderPatchPlugIn.h"
+i"OSC.h"
+i"OSCMsg.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch
+c000000004A0A9C160000000000000032
+t1242209302
+s50
+i<Quartz/Quartz.h>
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp
+c000000004A0D250F00000000000003C2
+t1242375439
+s962
+i"OSC.h"
+i<iostream>
+i<string.h>
+i"osc/OscOutboundPacketStream.h"
+i"ip/IpEndpointName.h"
+i"ip/UdpSocket.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.h
+c000000004A0D214300000000000000BF
+t1242374467
+s191
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.h
+c000000004A0FE37600000000000001AC
+t1242555254
+s428
+i<Cocoa/Cocoa.h>
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m
+c000000004A11022200000000000004A6
+t1242628642
+s1190
+i"OSCMsg.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin
+t1268669275
+s102
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Info.plist
+t1268669269
+s888
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/MacOS/MinuitSenderPatch
+t1268669275
+s260864
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Resources/English.lproj/Settings.nib
+t1268669270
+s14835
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/IpEndpointName.o
+t1268669274
+s5504
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitQCPlugInViewController.o
+t1268669275
+s28692
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatch.LinkFileList
+c000000004B9E5B55000000000000073F
+t1268669269
+s1855
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatchPlugIn.o
+t1268669274
+s47016
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/NetworkingUtils.o
+t1268669274
+s6264
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSC.o
+t1268669274
+s62164
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSCMsg.o
+t1268669275
+s13412
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscOutboundPacketStream.o
+t1268669274
+s53552
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscPrintReceivedElements.o
+t1268669274
+s108708
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscReceivedElements.o
+t1268669274
+s65324
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscTypes.o
+t1268669274
+s5404
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/UdpSocket.o
+t1268669275
+s329252
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp
+c000000004A0BF46F00000000000009AB
+t1242297455
+s2475
+i"IpEndpointName.h"
+i<stdio.h>
+i"NetworkingUtils.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.h
+c000000004A0BF46F0000000000000AF5
+t1242297455
+s2805
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp
+c000000004A0BFF7C0000000000000782
+t1242300284
+s1922
+i"../ip/NetworkingUtils.h"
+i<netdb.h>
+i<sys/socket.h>
+i<netinet/in.h>
+i<string.h>
+i<stdio.h>
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.h
+c000000004A0BF46F00000000000007AA
+t1242297455
+s1962
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/PacketListener.h
+c000000004A0BF46F00000000000006AD
+t1242297455
+s1709
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/TimerListener.h
+c000000004A0BF46F000000000000064A
+t1242297455
+s1610
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp
+c000000004A0BFF8E0000000000003AE9
+t1242300302
+s15081
+i"../ip/UdpSocket.h"
+i<vector>
+i<algorithm>
+i<stdexcept>
+i<assert.h>
+i<signal.h>
+i<math.h>
+i<errno.h>
+i<string.h>
+i<pthread.h>
+i<unistd.h>
+i<stdlib.h>
+i<stdio.h>
+i<netdb.h>
+i<sys/types.h>
+i<sys/socket.h>
+i<sys/time.h>
+i<netinet/in.h>
+i"../ip/PacketListener.h"
+i"../ip/TimerListener.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.h
+c000000004A0BF46F000000000000151A
+t1242297455
+s5402
+i"NetworkingUtils.h"
+i"IpEndpointName.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscException.h
+c000000004A0BF46F00000000000007E0
+t1242297455
+s2016
+i<exception>
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscHostEndianness.h
+c000000004A0BF46F0000000000000928
+t1242297455
+s2344
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp
+c000000004A0BF46F0000000000003973
+t1242297455
+s14707
+i"OscOutboundPacketStream.h"
+i<string.h>
+i<stdlib.h>
+i<assert.h>
+i<malloc.h>
+i"OscHostEndianness.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.h
+c000000004A0BF46F0000000000001324
+t1242297455
+s4900
+i"OscTypes.h"
+i"OscException.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp
+c000000004A0BF46F0000000000001B19
+t1242297455
+s6937
+i"OscPrintReceivedElements.h"
+i<iostream>
+i<iomanip>
+i<ctime>
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.h
+c000000004A0BF46F00000000000007DE
+t1242297455
+s2014
+i<iosfwd>
+i"OscReceivedElements.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp
+c000000004A0BF46F0000000000004544
+t1242297455
+s17732
+i"OscReceivedElements.h"
+i<cassert>
+i"OscHostEndianness.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.h
+c000000004A0BF46F0000000000003301
+t1242297455
+s13057
+i"OscTypes.h"
+i"OscException.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp
+c000000004A0BF46F000000000000063E
+t1242297455
+s1598
+i"OscTypes.h"
+
+N/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.h
+c000000004A0C26AB0000000000000FAD
+t1242310315
+s4013
+
+N/var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-ebileopnivfgvufwmqvgecpmjvkt/MinuitSenderPatch_Prefix.pch.gch
+t1268669273
+s57240944
+
+N/var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch.gch
+t1268669270
+s2527600
+
+N/var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch.gch
+t1268669273
+s52919696
+
+NInfo.plist
+c000000004A0ABBE50000000000000380
+t1242217445
+s896
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies290362069#290362069#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/IpEndpointName.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.652027
+e290362074.690266
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/IpEndpointName.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@97"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp290362074#290362074#0(0"0(0#0#89"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp4300885448#1462"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/IpEndpointName.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/IpEndpointName.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitQCPlugInViewController.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290362074.975467
+e290362075.159425
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitQCPlugInViewController.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m: In function '-[MinuitQCPlugInViewController initWithPlugIn:viewNibName:]':
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: 'QCPlugIn' may not respond to '-oscPathTable'
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: (Messages without a matching method signature
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: will be assumed to return 'id' and accept
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: '...' as arguments.)
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m: In function '-[MinuitQCPlugInViewController addNamedFloat:]':
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:33: warning: 'QCPlugIn' may not respond to '-oscPathTable'
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:45: warning: 'QCPlugIn' may not respond to '-oscPathTable'
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m: In function '-[MinuitQCPlugInViewController addSuffixedFloat:]':
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:83: warning: 'QCPlugIn' may not respond to '-oscPathTable'
+o/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:89: warning: 'QCPlugIn' may not respond to '-oscPathTable'
+lSLF07#2@106"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m290362074#290362075#0(1737"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m: In function '-[MinuitQCPlugInViewController initWithPlugIn:viewNibName:]':/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: 'QCPlugIn' may not respond to '-oscPathTable'/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: (Messages without a matching method signature/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: will be assumed to return 'id' and accept/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:22: warning: '...' as arguments.)/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m: In function '-[MinuitQCPlugInViewController addNamedFloat:]':/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:33: warning: 'QCPlugIn' may not respond to '-oscPathTable'/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:45: warning: 'QCPlugIn' may not respond to '-oscPathTable'/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m: In function '-[MinuitQCPlugInViewController addSuffixedFloat:]':/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:83: warning: 'QCPlugIn' may not respond to '-oscPathTable'/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m:89: warning: 'QCPlugIn' may not respond to '-oscPathTable'6(22@45"'QCPlugIn' may not respond to '-oscPathTable'290362075#175#158#0(6@98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m264328753#22#0#22#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)290362075#333#158#0(6@98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m264328753#22#0#22#0#0"0(22@45"'QCPlugIn' may not respond to '-oscPathTable'290362075#940#158#0(6@98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m264328753#33#0#33#0#26"'*' may not respond to '*'0(22@45"'QCPlugIn' may not respond to '-oscPathTable'290362075#1098#158#0(6@98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m264328753#45#0#45#0#26"'*' may not respond to '*'0(22@45"'QCPlugIn' may not respond to '-oscPathTable'290362075#1421#158#0(6@98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m264328753#83#0#83#0#26"'*' may not respond to '*'0(22@45"'QCPlugIn' may not respond to '-oscPathTable'290362075#1579#158#0(6@98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m264328753#89#0#89#0#26"'*' may not respond to '*'0(0#0#98"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m4300885448#1484"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fobjc-gc -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitQCPlugInViewController.m -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitQCPlugInViewController.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatchPlugIn.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
+s290362074.042259
+e290362074.240292
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatchPlugIn.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@102"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm290362074#290362074#0(0"0(0#0#94"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm4300885448#1496"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fobjc-gc -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-ebileopnivfgvufwmqvgecpmjvkt/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatchPlugIn.mm -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatchPlugIn.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/NetworkingUtils.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.690361
+e290362074.975341
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/NetworkingUtils.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp290362074#290362074#0(0"0(0#0#90"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp4300885448#1464"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/NetworkingUtils.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/NetworkingUtils.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSC.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.043035
+e290362074.494598
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSC.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp290362074#290362074#0(0"0(0#0#75"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp4300885448#1437"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSC.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSC.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSCMsg.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290362075.159603
+e290362075.296001
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSCMsg.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m290362075#290362075#0(0"0(0#0#76"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m4300885448#1440"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fobjc-gc -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/OSCMsg.m -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OSCMsg.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscOutboundPacketStream.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.240383
+e290362074.364804
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscOutboundPacketStream.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@107"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp290362074#290362074#0(0"0(0#0#99"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp4300885448#1481"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscOutboundPacketStream.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscOutboundPacketStream.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscPrintReceivedElements.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.364891
+e290362074.955545
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscPrintReceivedElements.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@108"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp290362074#290362074#0(0"0(0#0#100"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp4300885448#1483"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscPrintReceivedElements.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscPrintReceivedElements.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscReceivedElements.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.494695
+e290362074.613672
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscReceivedElements.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp290362074#290362074#0(0"0(0#0#95"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp4300885448#1473"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscReceivedElements.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscReceivedElements.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscTypes.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.613773
+e290362074.651948
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscTypes.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp290362074#290362074#0(0"0(0#0#84"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp4300885448#1451"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/osc/OscTypes.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/OscTypes.o0#
+
+CCompileC build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/UdpSocket.o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362074.955636
+e290362075.469568
+r1
+xCompileC
+xbuild/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/UdpSocket.o
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp290362074#290362075#0(0"0(0#0#84"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp4300885448#1452"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -include /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/ip/UdpSocket.cpp -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/UdpSocket.o0#
+
+CCompileXIB /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/English.lproj/Settings.xib
+s290362069.873774
+e290362070.113716
+r1
+xCompileXIB
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/English.lproj/Settings.xib
+lSLF07#2@37"CompileXIB English.lproj/Settings.xib290362069#290362070#0(0"0(0#0#94"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/English.lproj/Settings.xib4300885448#427"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Resources/English.lproj/Settings.nib /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/English.lproj/Settings.xib0#
+
+CLd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/MacOS/MinuitSenderPatch normal x86_64
+s290362075.469657
+e290362075.603141
+r1
+xLd
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/MacOS/MinuitSenderPatch
+xnormal
+xx86_64
+lSLF07#2@142"Link /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/MacOS/MinuitSenderPatch290362075#290362075#0(0"0(0#0#0"4300885448#766"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/g++-4.2 -arch x86_64 -bundle -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -filelist /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/Objects-normal/x86_64/MinuitSenderPatch.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework Quartz -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/MacOS/MinuitSenderPatch0#
+
+CProcessInfoPlistFile /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Info.plist Info.plist
+s290362069.870876
+e290362069.873715
+r1
+xProcessInfoPlistFile
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist290362069#290362069#0(0"0(0#0#78"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/Info.plist4300885448#281"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    builtin-infoPlistUtility Info.plist -expandbuildsettings -platform macosx -o /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin/Contents/Info.plist0#
+
+CProcessPCH /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch.gch MinuitSenderPatch_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290362070.284480
+e290362073.556039
+r1
+xProcessPCH
+x/var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch.gch
+xMinuitSenderPatch_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Precompile MinuitSenderPatch_Prefix.pch290362070#290362073#0(0"0(0#0#96"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch4300885448#1303"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fobjc-gc -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch -o /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-gjlakggayuhxzdakvlwzpddfniib/MinuitSenderPatch_Prefix.pch.gch0#
+
+CProcessPCH++ /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-ebileopnivfgvufwmqvgecpmjvkt/MinuitSenderPatch_Prefix.pch.gch MinuitSenderPatch_Prefix.pch normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
+s290362070.113822
+e290362074.042161
+r1
+xProcessPCH++
+x/var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-ebileopnivfgvufwmqvgecpmjvkt/MinuitSenderPatch_Prefix.pch.gch
+xMinuitSenderPatch_Prefix.pch
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Precompile MinuitSenderPatch_Prefix.pch290362070#290362074#0(0"0(0#0#96"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch4300885448#1324"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fobjc-gc -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch -o /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-ebileopnivfgvufwmqvgecpmjvkt/MinuitSenderPatch_Prefix.pch.gch0#
+
+CProcessPCH++ /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch.gch MinuitSenderPatch_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
+s290362070.114584
+e290362070.284378
+r1
+xProcessPCH++
+x/var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch.gch
+xMinuitSenderPatch_Prefix.pch
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Precompile MinuitSenderPatch_Prefix.pch290362070#290362070#0(0"0(0#0#96"/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch4300885448#1304"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/MinuitSenderPatch.hmap -F/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/include -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources/x86_64 -I/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/MinuitSenderPatch.build/Debug/MinuitSenderPatch.build/DerivedSources -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/MinuitSenderPatch_Prefix.pch -o /var/folders/hu/huEYCktsGKKTwhE2+lrXTE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MinuitSenderPatch_Prefix-fvqpkhsyzjoxrhfkkvesgwnncmjz/MinuitSenderPatch_Prefix.pch.gch0#
+
+CTouch /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin
+s290362075.603222
+e290362075.606065
+r1
+xTouch
+x/Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin
+lSLF07#2@110"Touch /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin290362075#290362075#0(0"0(0#0#0"4300885448#202"    cd /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch    /usr/bin/touch -c /Users/fredericvernier/Projects/MinuitSenderPatch/MinuitSenderPatch/build/Debug/MinuitSenderPatch.plugin0#
+
