@@ -1,4 +1,4 @@
-#N canvas 926 131 682 726 10;
+#N canvas 924 136 682 726 10;
 #X obj 58 133 route /;
 #X obj 340 247 s;
 #X obj 347 225 any;
@@ -6,7 +6,7 @@
 #X obj 328 138 s2l :;
 #X obj 328 159 list split 1;
 #X obj 328 180 t b a;
-#N canvas 132 22 265 334 \$0-nodes 0;
+#N canvas 132 50 265 334 \$0-nodes 0;
 #X obj 36 177 list;
 #X obj 36 259 list;
 #X msg 57 218 125;
@@ -76,7 +76,7 @@
 #X connect 14 0 1 0;
 #X restore 278 537 pd \$0-attrb;
 #X obj 193 197 s2l /;
-#N canvas 962 771 302 195 \$0-to-Minuit 1;
+#N canvas 962 771 302 195 \$0-to-Minuit 0;
 #X obj 88 158 sendOSC;
 #X msg 97 77 disconnect;
 #X obj 88 8 loadbang;
@@ -122,7 +122,7 @@
 #X connect 9 0 8 0;
 #X restore 456 614 pd \$0-to-Minuit;
 #X obj 496 414 r GLOBAL-MINUIT-GET;
-#N canvas 454 39 202 160 \$0-route-stuff 0;
+#N canvas 454 50 202 160 \$0-route-stuff 0;
 #X obj 56 114 s;
 #X obj 63 92 any;
 #X obj 44 49 list split 1;
@@ -253,7 +253,7 @@
 1;
 #X obj 558 623 print toOSC;
 #X obj 58 24 t a a;
-#X obj 98 43 print fromOSC;
+#X obj 108 43 print fromOSC;
 #X obj 531 582 t a a;
 #X text 512 149 /node2/sub/param2;
 #X obj 274 597 realtime;
@@ -303,7 +303,7 @@
 #X msg 416 460 symbol Data;
 #X msg 340 404 symbol none;
 #X obj 227 419 demux 1 1;
-#N canvas 427 29 625 676 \$0-subnodes 0;
+#N canvas 427 50 625 676 \$0-subnodes 0;
 #X msg 148 466 merge \$1 \$2;
 #X obj 148 490 coll;
 #C restore;
@@ -555,6 +555,9 @@
 #X text 321 -4 device name (same as in i-score) \,;
 #X text 321 10 port to listen to \,;
 #X text 321 40 port to send to (default 13579);
+#X obj 108 23 spigot;
+#X obj 149 23 tgl 17 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 74 0;
 #X connect 0 1 25 0;
 #X connect 2 0 1 0;
@@ -587,7 +590,7 @@
 #X connect 48 0 47 1;
 #X connect 50 0 73 0;
 #X connect 50 1 60 0;
-#X connect 50 1 51 0;
+#X connect 50 1 94 0;
 #X connect 52 0 11 0;
 #X connect 52 1 47 0;
 #X connect 52 1 62 0;
@@ -630,3 +633,5 @@
 #X connect 85 2 77 0;
 #X connect 85 3 84 0;
 #X connect 86 0 50 0;
+#X connect 94 0 51 0;
+#X connect 95 0 94 1;
