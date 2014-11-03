@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
@@ -108,7 +108,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u661000211"
+					"varname" : "u063003709"
 				}
 
 			}
@@ -138,7 +138,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -250,7 +250,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u226000213"
+									"varname" : "u819003708"
 								}
 
 							}
@@ -333,7 +333,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 2,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -401,7 +401,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u644000215"
+									"varname" : "u733003707"
 								}
 
 							}
@@ -524,7 +524,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 250.0, 186.0, 19.0 ],
-					"text" : "pattrstorage2minuit MinuitDevice1"
+					"text" : "pattrstorage2minuit MinuitDevice"
 				}
 
 			}
@@ -734,14 +734,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "pattrstorage2minuit.maxpat",
-				"bootpath" : "/Users/WALL-E/Desktop/MaxMSP-pattrstorage",
+				"bootpath" : "/Users/bltzr/dev/Minuit/Max pattrstorage Interface",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage2minuit.js",
-				"bootpath" : "/Users/WALL-E/Desktop/MaxMSP-pattrstorage",
+				"bootpath" : "/Users/bltzr/dev/Minuit/Max pattrstorage Interface",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1

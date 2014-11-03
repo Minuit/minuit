@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <!--protocols setup-->
+ <protocol name="OSC">
+  <i-score ip="127.0.0.1" port="13580"/>
+ </protocol>
+ <protocol name="Minuit">
+  <myPdApp ip="127.0.0.1" port="10001u 0u"/>
+  <i-score ip="127.0.0.1" port="13579"/>
+ </protocol>
+ <!--applications namespace-->
+ <application name="myPdApp" author="" version="" type="mirror" cachedAttributes="tags rangeClipmode service rangeBounds priority">
+  <node address="node1">
+   <node address="subnode2">
+    <node address="control" object="Data" tags="&lt;pointer 0x0&gt;" rangeBounds="0 127" service="parameter" rangeClipmode="&lt;pointer 0x0&gt;" priority="&lt;pointer 0x0&gt;"/>
+   </node>
+   <node address="subnode1">
+    <node address="control" object="Data" tags="&lt;pointer 0x0&gt;" rangeBounds="0 127" service="parameter" rangeClipmode="&lt;pointer 0x0&gt;" priority="&lt;pointer 0x0&gt;"/>
+    <node address="param" object="Data" tags="&lt;pointer 0x0&gt;" rangeBounds="&lt;pointer 0x0&gt;" service="parameter" rangeClipmode="&lt;pointer 0x0&gt;" priority="&lt;pointer 0x0&gt;"/>
+   </node>
+  </node>
+  <node address="node2">
+   <node address="subthing1">
+    <node address="subsub">
+     <node address="troncol" object="Data" tags="&lt;pointer 0x0&gt;" rangeBounds="&lt;pointer 0x0&gt;" service="parameter" rangeClipmode="&lt;pointer 0x0&gt;" priority="&lt;pointer 0x0&gt;"/>
+     <node address="marap" object="Data" tags="&lt;pointer 0x0&gt;" rangeBounds="0 127" service="parameter" rangeClipmode="&lt;pointer 0x0&gt;" priority="&lt;pointer 0x0&gt;"/>
+    </node>
+   </node>
+  </node>
+ </application>
+ <application name="i-score" author="" version="" type="local">
+  <node address="Box.4" object="Automation"/>
+  <node address="floatZigZag" object="Automation"/>
+  <node address="Init" object="Automation"/>
+  <node address="Main" object="Scenario"/>
+ </application>
+ <Scenario name="Main" mute="0" color="255 255 255" viewZoom="1.000000 1.000000" viewPosition="0 0">
+  <startEvent name="start" date="0u" mute="0"/>
+  <endEvent name="end" date="36000000u" mute="0"/>
+  <event name="j398183431" date="144u" mute="0">
+   <command address="myPdApp:/node1/subnode1/control">0</command>
+   <command address="myPdApp:/node1/subnode1/param">hello</command>
+   <command address="myPdApp:/node1/subnode2/control">0.100000</command>
+   <command address="myPdApp:/node2/subthing1/subsub/marap">44</command>
+   <command address="myPdApp:/node2/subthing1/subsub/troncol">foo</command>
+  </event>
+  <event name="j2530498387" date="5200u" mute="0">
+   <command address="myPdApp:/node1/subnode1/control">127</command>
+   <command address="myPdApp:/node1/subnode1/param">world</command>
+   <command address="myPdApp:/node1/subnode2/control">127.099998</command>
+   <command address="myPdApp:/node2/subthing1/subsub/marap">44</command>
+   <command address="myPdApp:/node2/subthing1/subsub/troncol">bar</command>
+  </event>
+  <event name="j2238023308" date="8416u" mute="0" condition="j1535490861">
+   <command address="myPdApp:/node1/subnode1/control">125.992065</command>
+   <command address="myPdApp:/node1/subnode2/control">126.092064</command>
+  </event>
+  <event name="j3778423389" date="6160u" mute="0">
+   <command address="myPdApp:/node1/subnode1/param">world</command>
+  </event>
+  <event name="j264688669" date="11216u" mute="0">
+   <command address="myPdApp:/node1/subnode1/param">universe</command>
+  </event>
+  <event name="j3734927151" date="14128u" mute="0">
+   <command address="myPdApp:/node1/subnode1/control">0</command>
+   <command address="myPdApp:/node1/subnode2/control">61.099998</command>
+  </event>
+  <Automation name="Init" start="j398183431" end="j2530498387" mute="0" color="60 60 60" verticalPosition="117u" verticalSize="143u"/>
+  <Scenario name="j2688235793" start="j398183431" end="j2530498387" mute="0" color="255 255 255" verticalPosition="0u" verticalSize="1u"/>
+  <Automation name="floatZigZag" start="j2238023308" end="j3734927151" mute="0" color="60 60 60" verticalPosition="223u" verticalSize="138u"/>
+  <Scenario name="j3062752522" start="j2238023308" end="j3734927151" mute="0" color="255 255 255" verticalPosition="0u" verticalSize="1u"/>
+  <Interval name="j3445320212" start="j2530498387" end="j2238023308" durationMin="944u" durationMax="3744u" mute="0" color="255 255 255" verticalPosition="0u" verticalSize="1u"/>
+  <Automation name="Box.4" start="j3778423389" end="j264688669" mute="0" color="60 60 60" verticalPosition="407u" verticalSize="149u"/>
+  <Scenario name="j2548358179" start="j3778423389" end="j264688669" mute="0" color="255 255 255" verticalPosition="0u" verticalSize="1u"/>
+  <Interval name="j114899660" start="j2530498387" end="j3778423389" durationMin="960u" durationMax="960u" mute="0" color="255 255 255" verticalPosition="0u" verticalSize="1u"/>
+  <condition name="j1535490861" dispose="">
+   <case event="j2238023308" trigger="/floatZigZag/start" default="1"/>
+  </condition>
+ </Scenario>
+</jamoma>

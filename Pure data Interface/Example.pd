@@ -1,0 +1,54 @@
+#N canvas 572 177 877 709 10;
+#X obj 21 75 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 21 213 5 0 0 0 - - -;
+#X obj 16 562 minuit.any /node2/subthing1/subsub/troncol anything;
+#X obj 17 482 print SYM;
+#X obj 16 587 print ANY;
+#X obj 16 669 print NUM;
+#X msg 17 434 edit;
+#X msg 16 539 edit;
+#X msg 16 619 edit;
+#X msg 55 74 edit;
+#X obj 21 238 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6100 1;
+#X floatatom 21 376 5 0 0 0 - - -;
+#X msg 100 249 edit;
+#X obj 54 319 - 0.1;
+#X obj 54 248 + 0.1;
+#X obj 54 287 minuit.num /node1/subnode2/control 11 float 0 127;
+#X obj 16 6 minuit.device myPdApp 10001;
+#X text 198 3 <= Using the minuit.device abstraction \, we declare
+this patch as a Minuit device;
+#X text 427 155 The Minuit library includes a number of abstractions
+exposing some values to the Minuit protocole.;
+#X text 427 198 These abstractions expect as argument \, an address
+in the application namespace \, a default value \, the type of the
+value to expose (float \, integer \, symbol \, anything) and some optionnal
+value min max.;
+#X obj 55 112 minuit.num /node1/subnode1/control 11 float 0 127;
+#X obj 17 457 minuit.sym /node1/subnode1/param hello symbol;
+#X obj 16 644 minuit.num /node2/subthing1/subsub/marap 44 float 0 127
+;
+#X msg 77 434 hello;
+#X msg 135 434 world;
+#X symbolatom 102 490 10 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 0 0 20 0;
+#X connect 2 0 4 0;
+#X connect 6 0 21 0;
+#X connect 7 0 2 0;
+#X connect 8 0 22 0;
+#X connect 9 0 20 0;
+#X connect 10 0 11 0;
+#X connect 10 0 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 20 0 0 0;
+#X connect 21 0 3 0;
+#X connect 21 0 25 0;
+#X connect 22 0 5 0;
+#X connect 23 0 21 0;
+#X connect 24 0 21 0;

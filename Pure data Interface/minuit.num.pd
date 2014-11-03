@@ -91,8 +91,8 @@
 #X obj 61 38 route edit;
 #X obj 61 80 s pd-\$0-edit;
 #X msg 61 59 vis 1;
-#N canvas 503 55 822 171 \$0-edit 0;
-#N canvas 52 354 450 300 \$0-GOPme 0;
+#N canvas 2222 321 308 86 \$0-edit 1;
+#N canvas 1742 309 450 300 \$0-GOPme 0;
 #X obj 215 197 list;
 #X obj 14 194 s \$0-value;
 #X obj 87 194 s \$0-type;
@@ -112,7 +112,7 @@
 #X text 98 40 type;
 #X floatatom 14 62 5 0 0 0 - - -;
 #X text 12 40 value;
-#X obj 16 15 cnv 15 100 15 empty \$0-name-cnv /node1/subnode1/control
+#X obj 16 15 cnv 15 100 15 empty \$0-name-cnv /node1/subnode2/control
 0 7 0 14 -262144 -66577 0;
 #X obj 31 269 s \$0-name-cnv;
 #X msg 31 246 label \$1;
@@ -148,7 +148,7 @@
 #X connect 28 0 29 0;
 #X connect 29 0 17 0;
 #X coords 0 -1 1 1 300 80 2 10 10;
-#X restore -211 25 pd \$0-GOPme;
+#X restore -236 3 pd \$0-GOPme;
 #X restore 26 397 pd \$0-edit;
 #X obj 254 57 r /\$1-get;
 #X obj 59 136 r /\$1;

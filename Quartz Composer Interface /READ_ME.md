@@ -1,0 +1,2 @@
+This quartz composer plugin has not been ported for the version 2 of Minuit, nor to newer MacOS versions than snow-leopard.
+It is included in the repository in case somebody wants to use them, and is able to fix them. 

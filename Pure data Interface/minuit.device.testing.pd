@@ -22,7 +22,7 @@
 #X obj 176 189 minuit.num /node2/subthing2/subsub/marap 44 float 0
 127;
 #X obj 71 289 minuit.num /node1/subnode2/control 11 float 0 127;
-#X obj 355 9 minuit.device MinuitDevice1 9998;
+#X obj 355 9 minuit.device MinuitDevice 9998;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 2 0 0 0;
