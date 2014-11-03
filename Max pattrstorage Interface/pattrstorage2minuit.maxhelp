@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 72.0, 227.0, 557.0, 392.0 ],
+		"rect" : [ 53.0, 82.0, 557.0, 392.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 11.595187,
@@ -108,7 +108,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u063003709"
+					"varname" : "u868000074"
 				}
 
 			}
@@ -138,7 +138,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -250,7 +250,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u819003708"
+									"varname" : "u910000073"
 								}
 
 							}
@@ -333,7 +333,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -401,7 +401,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u733003707"
+									"varname" : "u067000072"
 								}
 
 							}
@@ -539,9 +539,9 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 200.0, 114.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1, 487, 629, 764 ],
+						"client_rect" : [ 737, 57, 1304, 302 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
 ,
 					"text" : "pattrstorage storage",
@@ -734,14 +734,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "pattrstorage2minuit.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Minuit/Max pattrstorage Interface",
+				"bootpath" : "/Users/WALL-E/Documents/minuit/Max pattrstorage Interface",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage2minuit.js",
-				"bootpath" : "/Users/bltzr/dev/Minuit/Max pattrstorage Interface",
+				"bootpath" : "/Users/WALL-E/Documents/minuit/Max pattrstorage Interface",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
