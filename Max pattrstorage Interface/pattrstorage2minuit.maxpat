@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 890.0, 45.0, 312.0, 158.0 ],
+		"rect" : [ 890.0, 45.0, 313.0, 162.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -2761,7 +2761,7 @@
 													"numoutlets" : 5,
 													"outlettype" : [ "", "", "", "", "" ],
 													"patching_rect" : [ 55.0, 146.0, 139.0, 20.0 ],
-													"text" : "regexp (/) @substitute \\\\"
+													"text" : "regexp (/) @substitute ::"
 												}
 
 											}
@@ -2798,7 +2798,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 73.0, 232.0, 25.0, 25.0 ]
+													"patching_rect" : [ 163.0, 242.0, 25.0, 25.0 ]
 												}
 
 											}
