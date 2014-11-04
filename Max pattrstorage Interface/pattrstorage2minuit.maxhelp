@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 9,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 53.0, 82.0, 557.0, 392.0 ],
+		"rect" : [ 333.0, 45.0, 557.0, 392.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 11.595187,
@@ -86,7 +86,7 @@
 					"setminmax" : [ 0.0, 127.0 ],
 					"setstyle" : 1,
 					"settype" : 0,
-					"size" : 64,
+					"size" : 12,
 					"varname" : "multislider"
 				}
 
@@ -102,13 +102,13 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 374.582886, 228.0, 59.5, 20.0 ],
 					"restore" : 					{
-						"multislider" : [ 18, 17, 17, 10, 11, 14, 17, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 20, 21, 22, 23, 23, 25, 26, 26, 28, 28, 28, 28, 29, 30, 31, 32, 34, 35, 37, 40, 43, 44, 44, 46, 46, 46, 47, 48, 52 ],
-						"slider" : [ 1 ],
+						"multislider" : [ 64, 72, 76, 81, 84, 88, 88, 86, 69, 68, 64, 54 ],
+						"slider" : [ 89 ],
 						"umenu" : [ "abba" ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u868000074"
+					"varname" : "u088001367"
 				}
 
 			}
@@ -138,11 +138,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 585.0, 330.0, 203.0, 117.0 ],
+						"rect" : [ 765.0, 752.0, 203.0, 117.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -161,6 +161,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -250,7 +251,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u910000073"
+									"varname" : "u868001366"
 								}
 
 							}
@@ -333,11 +334,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 586.0, 173.0, 161.0, 108.0 ],
+						"rect" : [ 1003.0, 745.0, 161.0, 108.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -357,6 +358,7 @@
 						"digest" : "",
 						"tags" : "",
 						"globalpatchername" : "grgr[1][1]",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -396,12 +398,12 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 35.0, 60.0, 59.5, 20.0 ],
 									"restore" : 									{
-										"bit" : [ 85 ],
-										"overdrive" : [ 1626.0 ]
+										"bit" : [ 92 ],
+										"overdrive" : [ 1636.0 ]
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u067000072"
+									"varname" : "u834001365"
 								}
 
 							}
@@ -533,18 +535,19 @@
 					"fontname" : "Arial",
 					"fontsize" : 11.595187,
 					"id" : "obj-5",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 200.0, 114.0, 19.0 ],
+					"patching_rect" : [ 17.0, 202.0, 121.0, 32.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 737, 57, 1304, 302 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
 ,
-					"text" : "pattrstorage storage",
+					"text" : "pattrstorage storage @outputmode 1",
 					"varname" : "storage"
 				}
 
@@ -734,17 +737,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "pattrstorage2minuit.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/minuit/Max pattrstorage Interface",
+				"bootpath" : "/Users/bltzr/Dropbox/drop-I-score/Installer/Installer-addons/Examples/i-score with Minuit/MaxMSP-pattrstorage",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage2minuit.js",
-				"bootpath" : "/Users/WALL-E/Documents/minuit/Max pattrstorage Interface",
+				"bootpath" : "/Users/bltzr/Dropbox/drop-I-score/Installer/Installer-addons/Examples/i-score with Minuit/MaxMSP-pattrstorage",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "printit.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

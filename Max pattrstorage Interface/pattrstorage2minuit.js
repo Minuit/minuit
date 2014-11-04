@@ -27,7 +27,8 @@ function from_minuit(chaine)
         set_namespace(chaine.replace(/^i-score\?namespace /, ""));
     }
     else if (chaine.match(/^i-score\?get/)) {
-		outlet(out_ps, chaine.replace(/^i-score\?get /, "get") );
+
+        set_values(chaine.replace(/^i-score\?get /, ""));
     }
     else if (chaine.match(leavesRegExp)) { 
         to_pattrstorage(chaine.replace(leavesRegExp, ""));
@@ -45,6 +46,11 @@ function from_pattrstorage(chaine)
     }
 }
 
+function to_pattrstorage(chaine)
+{
+    outlet(out_ps, chaine);
+}
+
 function set_namespace(chaine)
 {
     var rootRegExp = new RegExp("^/" + mynamespace + "$");
@@ -56,7 +62,20 @@ function set_namespace(chaine)
     }
     else if ( chaine.match(leavesRegExp) ) // leaves
     {
-        outlet(out_minuit, mynamespace + ":namespace " + chaine + " Data attributes={ value type rangeBounds service }");
+        outlet(out_minuit, mynamespace + ":namespace " + chaine + " Data attributes={ value service }");
+    }
+}
+
+function set_values(chaine)
+{
+    var leavesRegExp = new RegExp("^/");
+
+    if ( chaine.match(leavesRegExp) ) // leaves
+    {
+        var s = chaine.replace(leavesRegExp, "");
+        s = chaine.replace("/", "");
+        s = chaine.replace(":value", "");
+        outlet(out_ps, "get" + s );
     }
 }
 
