@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 333.0, 45.0, 557.0, 392.0 ],
+		"rect" : [ 518.0, 45.0, 561.0, 401.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 11.595187,
@@ -103,12 +103,12 @@
 					"patching_rect" : [ 374.582886, 228.0, 59.5, 20.0 ],
 					"restore" : 					{
 						"multislider" : [ 64, 72, 76, 81, 84, 88, 88, 86, 69, 68, 64, 54 ],
-						"slider" : [ 73 ],
+						"slider" : [ 0 ],
 						"umenu" : [ "abba" ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u201000092"
+					"varname" : "u758003466"
 				}
 
 			}
@@ -142,7 +142,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 765.0, 752.0, 203.0, 117.0 ],
+						"rect" : [ 2.0, 485.0, 203.0, 117.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -244,14 +244,14 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 120.0, 55.0, 59.5, 20.0 ],
 									"restore" : 									{
-										"amp" : [ 177 ],
+										"amp" : [ 191 ],
 										"feedback" : [ 184.0 ],
 										"random" : [ 87 ],
 										"time" : [ 8.01 ]
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u910000091"
+									"varname" : "u205003465"
 								}
 
 							}
@@ -338,7 +338,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 1003.0, 745.0, 161.0, 108.0 ],
+						"rect" : [ 6.0, 678.0, 161.0, 108.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -398,12 +398,12 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 35.0, 60.0, 59.5, 20.0 ],
 									"restore" : 									{
-										"bit" : [ 92 ],
-										"overdrive" : [ 1636.0 ]
+										"bit" : [ 251 ],
+										"overdrive" : [ 251.0 ]
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u317000090"
+									"varname" : "u371003464"
 								}
 
 							}
@@ -466,11 +466,12 @@
 					"fontsize" : 11.595187,
 					"frgb" : 0.0,
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 369.0, 254.0, 19.0 ],
-					"text" : "© CICM 2009 - Karim Barkati & Alessio Santini"
+					"patching_rect" : [ 10.0, 348.0, 270.0, 32.0 ],
+					"text" : "© CICM 2009 - Karim Barkati & Alessio Santini\nGMEA 2013 - Théo de la Hogue & Pascal Baltazar"
 				}
 
 			}
@@ -526,12 +527,97 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 250.0, 186.0, 19.0 ],
-					"text" : "pattrstorage2minuit MinuitDevice"
+					"text" : "pattrstorage2minuit MinuitDevice",
+					"varname" : "pattrstorage2minuit"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"active" : 					{
+						"pattrstorage2minuit" : 0,
+						"pattrstorage2minuit::interface" : 0,
+						"pattrstorage2minuit::interface::?attrs" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher::u546003417" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[1]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[1]::u161003806" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[1]::u404003821" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[1]::u064003838" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[1]::u269004094" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[2]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[2]::u261004072" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::patcher[2]::u576004080" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u078004447" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u172004477" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u122004487" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u233004502" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u209004517" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u948004532" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u892004547" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u745004562" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u230004572" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u500004582" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u888004599" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u739004612" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u726004625" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u967004635" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u242004645" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit::u676004667" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u708004452" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u954004465" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u133004482" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u517004492" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u256004507" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u135004522" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u802004537" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u514004552" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u904004567" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u191004577" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u703004587" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u594004604" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u820004616" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u088004630" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u176004640" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u207004650" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u995004659" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive::u300004672" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[1]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[1]::u136004460" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[1]::u100004865" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/delay/amp" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/delay/amp::u412004497" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/delay/amp::u506004512" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/delay/amp::u185004527" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/delay/amp::u417004542" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/delay/amp::u181004557" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[1]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[1]::u366004868" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[2]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[2]::u612004878" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[2]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[2]::u389004881" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[3]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[3]::u335004894" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[3]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[3]::u990004897" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[4]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[4]::u278004907" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[4]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[4]::u104004931" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[5]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[5]::u926004938" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[5]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[5]::u469004941" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[6]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/bit[6]::u013004948" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[6]" : 0,
+						"pattrstorage2minuit::interface::?attrs::patcher::/dist/overdrive[6]::u141004951" : 0
+					}
+,
 					"fontname" : "Arial",
 					"fontsize" : 11.595187,
 					"id" : "obj-5",
@@ -541,7 +627,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 215.0, 121.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 854, 172, 1326, 395 ],
+						"client_rect" : [ 556, 49, 1200, 851 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
@@ -747,6 +833,17 @@
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "minuitListen.maxpat",
+				"bootpath" : "/Users/bltzr/dev/Minuit-pattrstorage",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
