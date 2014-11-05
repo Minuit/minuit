@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 890.0, 45.0, 307.0, 153.0 ],
+		"rect" : [ 890.0, 45.0, 310.0, 151.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -911,7 +911,7 @@
 															"architecture" : "x86"
 														}
 ,
-														"rect" : [ 214.0, 156.0, 1127.0, 462.0 ],
+														"rect" : [ 214.0, 156.0, 838.0, 445.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -954,7 +954,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 498.5, 264.5, 100.0, 20.0 ],
-																	"text" : "append none"
+																	"text" : "append 0"
 																}
 
 															}
@@ -983,7 +983,7 @@
 																	"numoutlets" : 5,
 																	"outlettype" : [ "", "", "", "", "" ],
 																	"patching_rect" : [ 478.0, 130.0, 98.0, 18.0 ],
-																	"text" : "regexp (.*)(:tags)"
+																	"text" : "regexp (.*)(:priority)"
 																}
 
 															}
@@ -1192,7 +1192,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 118.5, 258.0, 100.0, 33.0 ],
+																	"patching_rect" : [ 117.75, 258.0, 100.0, 33.0 ],
 																	"text" : "append parameter"
 																}
 
@@ -1356,7 +1356,7 @@
 																	"destination" : [ "obj-8", 0 ],
 																	"disabled" : 0,
 																	"hidden" : 0,
-																	"midpoints" : [ 128.0, 361.5, 128.0, 361.5 ],
+																	"midpoints" : [ 127.25, 361.5, 128.0, 361.5 ],
 																	"source" : [ "obj-14", 0 ]
 																}
 
