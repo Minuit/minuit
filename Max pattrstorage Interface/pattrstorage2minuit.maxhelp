@@ -103,12 +103,12 @@
 					"patching_rect" : [ 374.582886, 228.0, 59.5, 20.0 ],
 					"restore" : 					{
 						"multislider" : [ 64, 72, 76, 81, 84, 88, 88, 86, 69, 68, 64, 54 ],
-						"slider" : [ 89 ],
+						"slider" : [ 73 ],
 						"umenu" : [ "abba" ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u088001367"
+					"varname" : "u201000092"
 				}
 
 			}
@@ -251,7 +251,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u868001366"
+									"varname" : "u910000091"
 								}
 
 							}
@@ -403,7 +403,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u834001365"
+									"varname" : "u317000090"
 								}
 
 							}
@@ -535,19 +535,18 @@
 					"fontname" : "Arial",
 					"fontsize" : 11.595187,
 					"id" : "obj-5",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 202.0, 121.0, 32.0 ],
+					"patching_rect" : [ 17.0, 215.0, 121.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 737, 57, 1304, 302 ],
+						"client_rect" : [ 854, 172, 1326, 395 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
 ,
-					"text" : "pattrstorage storage @outputmode 1",
+					"text" : "pattrstorage storage",
 					"varname" : "storage"
 				}
 
@@ -720,7 +719,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 26.5, 279.0, 9.0, 279.0, 9.0, 189.0, 26.5, 189.0 ],
+					"midpoints" : [ 26.5, 279.0, 9.0, 279.0, 9.0, 200.0, 26.5, 200.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -737,21 +736,17 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "pattrstorage2minuit.maxpat",
-				"bootpath" : "/Users/bltzr/Dropbox/drop-I-score/Installer/Installer-addons/Examples/i-score with Minuit/MaxMSP-pattrstorage",
+				"bootpath" : "/Users/bltzr/dev/Minuit-pattrstorage",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage2minuit.js",
-				"bootpath" : "/Users/bltzr/Dropbox/drop-I-score/Installer/Installer-addons/Examples/i-score with Minuit/MaxMSP-pattrstorage",
+				"bootpath" : "/Users/bltzr/dev/Minuit-pattrstorage",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "printit.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
