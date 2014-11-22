@@ -30,8 +30,8 @@ function from_minuit(chaine)
 
         set_values(chaine.replace(/^i-score\?get /, ""));
     }
-    else if (chaine.match(leavesRegExp)) { 
-        to_pattrstorage(chaine.replace(leavesRegExp, ""));
+    else { 
+        to_pattrstorage(chaine);
     }
 }
 
