@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 345.0, 226.0, 1051.0, 711.0 ],
+		"rect" : [ 414.0, 264.0, 1051.0, 711.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 11.595187,
@@ -369,7 +369,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.0, 57.0, 485.0, 32.0 ],
 					"style" : "",
-					"text" : "pattrstorage2minuit is a Max abstraction which allows to interconnect a pattrstorage object with the Virage sequencer on an IP network via UDP, using the Minuit requests specification.",
+					"text" : "pattrstorage2minuit is a Max abstraction allowing to remotely control pattr-based patchers from Minuit compatible application (ie. i-score sequencer)",
 					"varname" : "autohelp_top_description"
 				}
 
