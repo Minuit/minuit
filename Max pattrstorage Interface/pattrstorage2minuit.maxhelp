@@ -59,13 +59,13 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 776.0, 457.0, 56.0, 21.0 ],
 					"restore" : 					{
-						"multislider" : [ 0.0 ],
+						"multislider" : [ 0.0, -0.014286, -0.128571, -0.157143, -0.1, -0.3, -0.342857, -0.328571, -0.257143, 0.0 ],
 						"slider" : [ 0 ]
 					}
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u406001711"
+					"varname" : "u531001827"
 				}
 
 			}
@@ -78,6 +78,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 802.0, 503.0, 195.0, 140.0 ],
+					"size" : 10,
 					"style" : "",
 					"varname" : "multislider"
 				}
@@ -165,7 +166,6 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "bang", "" ],
 					"patching_rect" : [ 644.0, 244.0, 260.0, 125.0 ],
-					"presentation_rect" : [ 415.0, 301.0, 0.0, 0.0 ],
 					"varname" : "player[2]",
 					"viewvisibility" : 1
 				}
@@ -234,7 +234,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 205.0, 383.0, 118.0, 76.0 ],
+					"patching_rect" : [ 205.0, 383.0, 122.0, 76.0 ],
 					"style" : "",
 					"text" : "Print communication messages to Max console",
 					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -513,8 +513,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-17" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-18" : [ "live.gain~[1]", "live.gain~", 0 ]
+			"obj-18" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-17" : [ "live.gain~", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
