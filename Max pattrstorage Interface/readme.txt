@@ -9,9 +9,9 @@ pattrstorage2minuit
   © 2013 GMEA - Théo de la Hogue
 
 
-  pattrstorage2minuit is a Max abstraction which allows to interconnect a pattrstorage object with the Virage sequencer on an IP network via UDP, using the Minuit requests specification.
+  pattrstorage2minuit is a Max abstraction which allows to interconnect a pattrstorage object with i-score sequencer on an IP network via UDP, using the Minuit requests specification.
 
-  To install both the object and the maxhelp in Max5, just drag and drop the pattrstorage2minuit folder into the Max5/Cycling\'\ 74 folder : you may be prompted the authentification password of your computer account, and it's done !
+  To install both the object and the maxhelp in Max, just drag and drop the pattrstorage2minuit folder to Max's preference path.
 
 
 #==================
