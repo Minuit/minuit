@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 741.0, 385.0, 220.0, 112.0 ],
+		"rect" : [ 741.0, 385.0, 218.0, 98.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -20,7 +20,7 @@
 		"gridsnaponopen" : 1,
 		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
+		"toolbarvisible" : 0,
 		"lefttoolbarpinned" : 0,
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
@@ -435,7 +435,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 122.75, 5.0, 77.0, 20.0 ],
 					"style" : "",
-					"text" : "#1",
+					"text" : "MinuitDevice",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textjustification" : 0
 				}
@@ -583,7 +583,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -644,7 +644,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
+											"revision" : 0,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -884,7 +884,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
+											"revision" : 0,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -931,7 +931,7 @@
 														"appversion" : 														{
 															"major" : 7,
 															"minor" : 0,
-															"revision" : 1,
+															"revision" : 0,
 															"architecture" : "x86",
 															"modernui" : 1
 														}
@@ -977,7 +977,7 @@
 																		"appversion" : 																		{
 																			"major" : 7,
 																			"minor" : 0,
-																			"revision" : 1,
+																			"revision" : 0,
 																			"architecture" : "x86",
 																			"modernui" : 1
 																		}
@@ -1353,7 +1353,7 @@
 																		"appversion" : 																		{
 																			"major" : 7,
 																			"minor" : 0,
-																			"revision" : 1,
+																			"revision" : 0,
 																			"architecture" : "x86",
 																			"modernui" : 1
 																		}
@@ -1485,7 +1485,7 @@
 																		"appversion" : 																		{
 																			"major" : 7,
 																			"minor" : 0,
-																			"revision" : 1,
+																			"revision" : 0,
 																			"architecture" : "x86",
 																			"modernui" : 1
 																		}
@@ -1831,7 +1831,7 @@
 																		"appversion" : 																		{
 																			"major" : 7,
 																			"minor" : 0,
-																			"revision" : 1,
+																			"revision" : 0,
 																			"architecture" : "x86",
 																			"modernui" : 1
 																		}
@@ -2038,7 +2038,7 @@
 																		"appversion" : 																		{
 																			"major" : 7,
 																			"minor" : 0,
-																			"revision" : 1,
+																			"revision" : 0,
 																			"architecture" : "x86",
 																			"modernui" : 1
 																		}
@@ -2084,7 +2084,7 @@
 																						"appversion" : 																						{
 																							"major" : 7,
 																							"minor" : 0,
-																							"revision" : 1,
+																							"revision" : 0,
 																							"architecture" : "x86",
 																							"modernui" : 1
 																						}
@@ -2868,7 +2868,7 @@
 														"appversion" : 														{
 															"major" : 7,
 															"minor" : 0,
-															"revision" : 1,
+															"revision" : 0,
 															"architecture" : "x86",
 															"modernui" : 1
 														}
@@ -3918,7 +3918,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
+											"revision" : 0,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -4221,7 +4221,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
+											"revision" : 0,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -4353,7 +4353,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
+											"revision" : 0,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -5207,7 +5207,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 826.0, 5.0, 25.0, 25.0 ],
 									"style" : ""
 								}
@@ -5823,7 +5823,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 181.0, 179.0, 25.0, 25.0 ],
 					"style" : ""
 				}
@@ -6126,20 +6126,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "pattrstorage2minuit.js",
-				"bootpath" : "~/@dev/@Minuit/Max pattrstorage Interface",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
