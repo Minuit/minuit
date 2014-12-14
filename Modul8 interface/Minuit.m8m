@@ -126,11 +126,11 @@
 		<key>WINDOW_HIDDEN</key>
 		<false/>
 		<key>WINDOW_MINIMIZED</key>
-		<false/>
+		<true/>
 		<key>WINDOW_X</key>
-		<real>1298</real>
+		<real>465</real>
 		<key>WINDOW_Y</key>
-		<real>535</real>
+		<real>854</real>
 	</dict>
 	<key>SCRIPT_CLEANUP</key>
 	<string></string>
@@ -141,10 +141,41 @@
 	<key>SCRIPT_INIT</key>
 	<string>from pprint import pprint
 import copy
-auto_priority_index = 0
+
+#make a dictionary with the whole namespace we want to use. This is done when loading the module
+#It will be quicker after to just update or query the dictionary
+
 m_db = {}
 m_master = {}		
 m_temp = {}
+auto_priority_index = 0
+
+
+#if keyword as a '_' in its name, the first part is a node, and the other part needs to be evaluated again
+def strip_node_leaf(layer_dict_name,m_keyword):
+	if len(m_keyword) == 1:
+		make_leaf(layer_index,m_keyword)
+	elif len(m_keyword) == 2: 
+		make_leaf(layer_index,(m_keyword[0],m_keyword[1]))
+		make_node(layer_index  , m_keyword[0])
+	else:
+		pass
+					
+def make_node(layer_dict_name , m_keyword):
+	the_node = m_keyword[0:]
+	print 'THE_NODE' , the_node
+	#m_keyword = str(m_keyword)			
+	#m_temp.update(dict([(m_keyword , dict([('value' , valueKeyw),('priority',auto_priority_index)]))]))
+	#m_db.update(dict([(layer_dict_name , dict(m_temp) ) ] ) )
+	
+def make_leaf(layer_dict_name,m_keyword):
+	print 'THE_LEAF' , m_keyword[0]
+	m_keyword = str(m_keyword)		
+	valueKeyw = modul8.getValue(keyword,layer_index)
+	m_temp.update(dict([(m_keyword , dict([('value' , valueKeyw),('priority',auto_priority_index)]))]))
+	m_db.update(dict([(layer_dict_name , dict(m_temp) ) ] ) )
+
+auto_priority_index = 0
 for keyword in modul8.getValue ('info_keywords',0) :
 	# m_keyword is the minuit keyword :  slash replaces underscore
 	m_keyword = copy.deepcopy(keyword)
@@ -159,47 +190,27 @@ for keyword in modul8.getValue ('info_keywords',0) :
 		#print  'MASTER_NAMESPACE', keyword , valueKeyw, auto_priority_index
 	elif keyword.startswith ('ctrl_layer') :
 		#print '#######',keyword
-		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'id':
+		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
 			keyword = None
 		else:
 			m_keyword = m_keyword.split('_')[2:]
-			m_keyword =  '/'.join(m_keyword)		
-			for layer_index in range(1,11): 
+			auto_priority_index = auto_priority_index + 1
+			for layer_index in range(1,2):
 				layer_dict_name = 'layer.'+str(layer_index)
-				if m_keyword:
-					if m_keyword != 'id':
-						auto_priority_index = auto_priority_index + 1
-						valueKeyw = modul8.getValue (keyword,layer_index)
-						#dict(layer_dict_name).update(dict(layer_dict_name_temp))
-						#m_temp = dict([(layer_dict_name ,dict([(m_keyword , dict([('value' , valueKeyw),('priority',auto_priority_index)]))]))])
-						m_temp.update(dict([(m_keyword , dict([('value' , valueKeyw),('priority',auto_priority_index)]))]))
-						m_db.update(dict([(layer_dict_name , dict(m_temp) ) ] ) )	
-## PROBLEME, CETTE LIGNE EFFACE LE PARAMETRE PRECEDENT ##
+				# fill-in the dict
+				strip_node_leaf(layer_dict_name,m_keyword)
 
-					
-		
-#						print '###APRES###',m_temp,m_db	
-			
-pprint(m_db)
-				
-					#m_db['master:' + keyword] = dict([('value' , valueKeyw),('priority',auto_priority_index)])
-					#print '######' , '/layer.' + str(layer_index) + m_keyword , valueKeyw , auto_priority_index
+
+						
+#print m_temp	
 # print master dictionary
 #print m_db
-#print m_temp
+#pprint(m_db)
 #for keys in m_db.keys():
-#	print m_db.items()
-	
+#	pprint m_db.items()
 #print m_temp
 # print layer dictionary
 #print m_layer_1
-
-
-
-
-
-
-
 
 #def minuit_get(node):
 #	if node == '/':
@@ -221,8 +232,6 @@ pprint(m_db)
 #	else:
 #		print 'NON'
 #
-
-
 #minuit_get('/')
 #minuit_get('/master')
 #minuit_get('/master/still')
