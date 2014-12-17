@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AUTHOR</key>
+	<string></string>
+	<key>CONTROLS</key>
+	<array/>
+	<key>DESCRIPTION</key>
+	<string></string>
+	<key>MODULE_AUTOFLUSH</key>
+	<false/>
+	<key>MODULE_CONTROL_ID_COUNTER</key>
+	<integer>0</integer>
+	<key>MODULE_LAYER_CONTEXTUAL</key>
+	<false/>
+	<key>MODULE_RESETDIRECTKEY_PAUSED</key>
+	<true/>
+	<key>MODULE_TITLEBAR_B</key>
+	<real>0.20392157137393951</real>
+	<key>MODULE_TITLEBAR_G</key>
+	<real>0.13333334028720856</real>
+	<key>MODULE_TITLEBAR_R</key>
+	<real>0.08235294371843338</real>
+	<key>PREFERENCES</key>
+	<dict>
+		<key>SCRIPT_STATE</key>
+		<string>PLAYING</string>
+		<key>WINDOW_HIDDEN</key>
+		<false/>
+		<key>WINDOW_MINIMIZED</key>
+		<false/>
+		<key>WINDOW_X</key>
+		<real>262</real>
+		<key>WINDOW_Y</key>
+		<real>978</real>
+	</dict>
+	<key>SCRIPT_CLEANUP</key>
+	<string></string>
+	<key>SCRIPT_DESERIALIZE</key>
+	<string></string>
+	<key>SCRIPT_EVENT</key>
+	<string></string>
+	<key>SCRIPT_INIT</key>
+	<string>import json
+
+from pprint import pprint
+#make a dictionary with the whole namespace when loading the module
+
+m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
+m_db = {}
+m_namespace = {}
+m_temp = {}
+auto_priority_index = 0
+m_master = {}
+m_layers = {}
+
+for keyword in modul8.getValue ('info_keywords',0) :
+	#List of master controls
+	if keyword.startswith ('ctrl_master') :			
+		valueKeyw = modul8.getValue (keyword,0)
+		keyword = keyword.split('_')[2:]
+		auto_priority_index = auto_priority_index + 1
+		keyword = '/'.join(keyword)
+		m_master[keyword] = dict([('value' , valueKeyw),('priority',auto_priority_index)])
+		m_namespace.update(dict([('master',m_master)]))
+	elif keyword.startswith ('ctrl_layer') :
+		#these are not usefull in our case
+		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
+			keyword = None
+		else:
+			for layer_index in range(1,11):
+				m_layers.setdefault(layer_index,{})
+				valueKeyw = modul8.getValue (keyword,layer_index)
+				auto_priority_index = auto_priority_index + 1
+				m_keyword = keyword
+				m_keyword = keyword.split('_')[2:]
+				tototata = {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter'}
+				if len(m_keyword) == 1:
+					m_layers[layer_index].update({m_keyword[0]:tototata})
+				if len(m_keyword) == 2:
+					m_layers[layer_index].setdefault(m_keyword[0],{})
+					m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:tototata})
+				elif len(m_keyword) ==3:			
+					m_layers[layer_index][m_keyword[0]].setdefault(m_keyword[1],{})
+					m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:tototata})
+			m_namespace.update(dict([('layer',m_layers)]))
+
+
+
+#pprint(m_layers)	
+#pprint(m_master)	
+pprint(m_namespace)
+json.dumps(m_namespace, ensure_ascii=False)
+</string>
+	<key>SCRIPT_KEYWORDEVENT</key>
+	<string></string>
+	<key>SCRIPT_MESSAGE</key>
+	<string></string>
+	<key>SCRIPT_PAUSEEVENT</key>
+	<string></string>
+	<key>SCRIPT_PERIODICAL</key>
+	<string></string>
+	<key>SCRIPT_SERIALIZE</key>
+	<string></string>
+	<key>SHORT_DESCRIPTION</key>
+	<string></string>
+	<key>VERSION</key>
+	<string></string>
+	<key>WINDOW_HEIGHT</key>
+	<real>50</real>
+	<key>WINDOW_WIDTH</key>
+	<real>200</real>
+</dict>
+</plist>
