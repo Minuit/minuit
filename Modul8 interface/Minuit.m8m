@@ -49,18 +49,9 @@ import copy
 
 m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
 m_db = {}
+m_temp = {}
 auto_priority_index = 0
 m_master = {}
-m_layer1 = {}
-m_layer2 = {}
-m_layer3 = {}
-m_layer4 = {}
-m_layer5 = {}
-m_layer6 = {}
-m_layer7 = {}
-m_layer8 = {}
-m_layer9 = {}
-m_layer10 = {}
 
 #if keyword as a '_' in its name, the first part is a node, and the other part needs to be evaluated again
 def strip_node_leaf(layer_dict_name,m_keyword, valueKeyw):
@@ -78,22 +69,18 @@ def strip_node_leaf(layer_dict_name,m_keyword, valueKeyw):
 # register a parameter					
 def make_leaf(layer_dict_name,m_keyword, valueKeyw):
 	pass
-	#m_temp.update(dict([(m_keyword , dict([('value' , valueKeyw),('priority',auto_priority_index)]))]))
-	#m_db.update(dict([(layer_dict_name , dict(m_temp) ) ] ) )
-
-																
+	m_temp.update(dict([(m_keyword , dict([('value' , valueKeyw),('priority',auto_priority_index)]))]))
+	m_db.update(dict([(layer_dict_name , dict(m_temp) ) ] ) )												
 def make_node(layer_dict_name , m_keyword,valueKeyw):
 	if len(m_keyword) &gt; 0:
 		if len(m_keyword) == 2:
 			m_keyword = {m_keyword[0]:{m_keyword[1]:{'value': valueKeyw,'priority': auto_priority_index}}}
 		elif len(m_keyword) ==3:				
 			m_keyword = {m_keyword[0]:{m_keyword[1]:{m_keyword[2]:None}}}
-	m_db['layer'] [str(layer_index)] = m_keyword
-	#m_db.update({'layer':{layer_index:m_keyword}})
-	#print {'layer':{layer_index:m_keyword}}
-	
-
-
+	########################################################
+	#the following line doesn't work - it replace the dict instead of updating it.
+	########################################################
+	m_db.update({'layer':{layer_index:m_keyword}})
 
 for keyword in modul8.getValue ('info_keywords',0) :
 	# m_keyword is the minuit keyword :  slash replaces underscore
@@ -105,7 +92,7 @@ for keyword in modul8.getValue ('info_keywords',0) :
 		auto_priority_index = auto_priority_index + 1
 		keyword = '/'.join(keyword)
 		m_master[keyword] = dict([('value' , valueKeyw),('priority',auto_priority_index)])
-		#m_db.update(dict([('master',m_master)]))
+		m_db.update(dict([('master',m_master)]))
 		#print  'MASTER_NAMESPACE', keyword , valueKeyw, auto_priority_index
 	elif keyword.startswith ('ctrl_layer') :
 		#print '#######',keyword
