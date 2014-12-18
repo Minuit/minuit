@@ -40,9 +40,35 @@
 	<key>SCRIPT_DESERIALIZE</key>
 	<string></string>
 	<key>SCRIPT_EVENT</key>
-	<string></string>
+	<string>if type == 'OSC':
+	#this is a query
+	if '?' in param['address']:
+		sender = param['address'].split('?')[0]
+		query = param['address'].split('?')[1]
+		node = param['args'][0]
+		print 'RECEIVE' , sender , 'request about' , query , 'for' , node
+		oscquery(sender,query,node)
+	#this is an error
+	elif '!' in param['address']:
+		print 'error'	
+	#this is an OSC message
+	elif '/' == param['address'][0]:
+		print 'OSC message' , param['address'] , param['args'][0]
+	#this is an answer (it won't be used for the 0.1 version of this module)
+	elif ':' in param['address']:
+		print 'answer'		
+	
+	
+	
+#&gt;Input : via DirecEvent(type,param)
+#type == 'OSC'
+#param contains :
+ #address: OSC address of the message
+ #args: a list of arguments
+ #timestamp: time when OSC message was received</string>
 	<key>SCRIPT_INIT</key>
-	<string># Namespace Module
+	<string>
+# Namespace Module
 # Renaud Rubiano - Studio Mirio - 2014
 
 #import json
@@ -50,35 +76,40 @@ from pprint import pprint
 
 #make a dictionary with the whole namespace when loading the module
 
-m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
+#m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
 m_namespace = {}
-m_namespace.setdefault('application',{})
-m_namespace['application'].update(m_app)
+#m_namespace.setdefault('application',{})
+#m_namespace['application'].update(m_app)
 m_master = {}
+m_master.update({'attributes':{'service':'model','tags':' ','priority': 1}})
 m_layers = {}
-auto_priority_index = 0
+auto_priority_index = 1
 
 for keyword in modul8.getValue ('info_keywords',0) :
 	layer_index = 0
 	valueKeyw = modul8.getValue (keyword,layer_index)
 	#List of master controls
-	if keyword.startswith ('ctrl_master') :			
+	if keyword.startswith ('ctrl_master') :
+		m_master.update({'data':{}})
 		keyword = keyword.split('_')[2:]
 		auto_priority_index = auto_priority_index + 1
 		keyword = '/'.join(keyword)
-		m_master[keyword] = dict([('value' , valueKeyw),('priority',auto_priority_index)])
-		m_namespace.update(dict([('master',m_master)]))
+		m_master['data'].setdefault(keyword,{})
+		m_master['data'][keyword].update([('value' , valueKeyw),('priority',auto_priority_index),('tags',' '),('service','parameter')])
+		# on y est presuqeu = plus qu'aà créer le master dans m_namespace et faire l'update au lieu de remplacer
+		m_namespace['master']['data'].update(m_master)
 	elif keyword.startswith ('ctrl_layer') :
 		#these are not usefull in our case
 		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
 			pass
 		else:
-			for layer_index in range(1,11):
-				m_layers.setdefault(layer_index,{})
+			for layer_index in range(1,2):
+				layer_index = 'layer.' + str(layer_index)
+				m_layers.setdefault(layer_index,{'service':'model','tags':' ','priority': auto_priority_index})
 				auto_priority_index = auto_priority_index + 1
 				m_keyword = keyword
 				m_keyword = keyword.split('_')[2:]
-				param_dict = {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter'}
+				param_dict = {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' '}
 				if len(m_keyword) == 1:
 					m_layers[layer_index].update({m_keyword[0]:param_dict})
 				if len(m_keyword) == 2:
@@ -87,14 +118,58 @@ for keyword in modul8.getValue ('info_keywords',0) :
 				elif len(m_keyword) ==3:			
 					m_layers[layer_index][m_keyword[0]].setdefault(m_keyword[1],{})
 					m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:param_dict})
-			m_namespace.update(dict([('layer',m_layers)]))
+			#m_namespace.update(m_layers)
 
+
+#share the namespace with other modules
+module.getSharedDictionary()['namespace'] = m_namespace
 
 
 #pprint(m_layers)	
-#pprint(m_master)	
+pprint(m_master)	
 #pprint(m_namespace)
 #json.dumps(m_namespace, ensure_ascii=False)
+
+
+#minuit module
+import socket
+
+def oscquery (sender,query,node):
+	print 'OSC-QUERY' , sender,query,node
+	if query == 'namespace':
+		address = 'modul8:namespace'
+		if node == '/' :
+			attributes = ['version' , 'name' , 'author']
+			answer = ['/' , 'Application' , 'nodes={' , m_namespace.keys() , '}' , 'attributes={' , attributes , '}']
+			print 'ANSWER_____1' , answer
+			modul8.sendOSC(address,answer)
+		else:
+			if len(node.split('/')) &gt; 2:
+				if node.split('/')[2] == 'tags':
+					pass
+				elif node.split('/')[2] == 'priority':
+					pass
+				elif node.split('/')[2] == 'service':
+					pass
+			else:
+				m_node = node.split('/')[1]
+				answer = [node , 'Container' , 'nodes={' , m_namespace[m_node].keys() , '}' , 'attributes={' , 'service' , '}']
+				print 'ANSWER____2' , answer
+				modul8.sendOSC(address,answer)
+	elif query == 'get':
+		address = 'modul8:get'
+		print 'GET' , node
+		m_node = node.split('/')[1]
+		m_node = m_node.split(':')[0]
+		get_request = node.split(':')[1]
+		print 'M_NODE' , m_node
+		print 'get_request' , get_request
+		answer = [node , m_namespace[m_node][get_request]]
+		print 'ANSWER____3' , answer
+		modul8.sendOSC(address,answer)
+		
+		
+		
 </string>
 	<key>SCRIPT_KEYWORDEVENT</key>
 	<string>#this is a master parameter
@@ -121,7 +196,14 @@ elif keyword.startswith ('ctrl_layer') :
 			m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:param_dict})
 		elif len(m_keyword) ==3:			
 			m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:param_dict})
-		m_namespace.update(dict([('layer',m_layers)]))</string>
+		m_namespace.update(dict([('layer',m_layers)]))
+
+
+
+
+#share the namespace with other modules
+module.getSharedDictionary()['namespace'] = m_namespace
+</string>
 	<key>SCRIPT_MESSAGE</key>
 	<string></string>
 	<key>SCRIPT_PAUSEEVENT</key>
