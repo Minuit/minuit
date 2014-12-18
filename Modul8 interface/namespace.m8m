@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AUTHOR</key>
-	<string></string>
+	<string>Renaud Rubiano - Studio Mirio</string>
 	<key>CONTROLS</key>
 	<array/>
 	<key>DESCRIPTION</key>
@@ -31,7 +31,7 @@
 		<key>WINDOW_MINIMIZED</key>
 		<false/>
 		<key>WINDOW_X</key>
-		<real>262</real>
+		<real>132</real>
 		<key>WINDOW_Y</key>
 		<real>978</real>
 	</dict>
@@ -42,23 +42,27 @@
 	<key>SCRIPT_EVENT</key>
 	<string></string>
 	<key>SCRIPT_INIT</key>
-	<string>import json
+	<string># Namespace Module
+# Renaud Rubiano - Studio Mirio - 2014
 
+#import json
 from pprint import pprint
+
 #make a dictionary with the whole namespace when loading the module
 
 m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
-m_db = {}
 m_namespace = {}
-m_temp = {}
-auto_priority_index = 0
+m_namespace.setdefault('application',{})
+m_namespace['application'].update(m_app)
 m_master = {}
 m_layers = {}
+auto_priority_index = 0
 
 for keyword in modul8.getValue ('info_keywords',0) :
+	layer_index = 0
+	valueKeyw = modul8.getValue (keyword,layer_index)
 	#List of master controls
 	if keyword.startswith ('ctrl_master') :			
-		valueKeyw = modul8.getValue (keyword,0)
 		keyword = keyword.split('_')[2:]
 		auto_priority_index = auto_priority_index + 1
 		keyword = '/'.join(keyword)
@@ -67,34 +71,57 @@ for keyword in modul8.getValue ('info_keywords',0) :
 	elif keyword.startswith ('ctrl_layer') :
 		#these are not usefull in our case
 		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
-			keyword = None
+			pass
 		else:
 			for layer_index in range(1,11):
 				m_layers.setdefault(layer_index,{})
-				valueKeyw = modul8.getValue (keyword,layer_index)
 				auto_priority_index = auto_priority_index + 1
 				m_keyword = keyword
 				m_keyword = keyword.split('_')[2:]
-				tototata = {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter'}
+				param_dict = {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter'}
 				if len(m_keyword) == 1:
-					m_layers[layer_index].update({m_keyword[0]:tototata})
+					m_layers[layer_index].update({m_keyword[0]:param_dict})
 				if len(m_keyword) == 2:
 					m_layers[layer_index].setdefault(m_keyword[0],{})
-					m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:tototata})
+					m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:param_dict})
 				elif len(m_keyword) ==3:			
 					m_layers[layer_index][m_keyword[0]].setdefault(m_keyword[1],{})
-					m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:tototata})
+					m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:param_dict})
 			m_namespace.update(dict([('layer',m_layers)]))
 
 
 
 #pprint(m_layers)	
 #pprint(m_master)	
-pprint(m_namespace)
-json.dumps(m_namespace, ensure_ascii=False)
+#pprint(m_namespace)
+#json.dumps(m_namespace, ensure_ascii=False)
 </string>
 	<key>SCRIPT_KEYWORDEVENT</key>
-	<string></string>
+	<string>#this is a master parameter
+if keyword.startswith ('ctrl_master') :	
+	#List of master controls
+	keyword = keyword.split('_')[2:]
+	keyword = '/'.join(keyword)
+	m_master[keyword] = dict([('value' , param),('priority',auto_priority_index)])
+	m_namespace.update(dict([('master',m_master)]))
+	#pprint (m_master)	
+#this is a layer parameter
+elif keyword.startswith ('ctrl_layer') :
+	#these are not usefull in our case
+	if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
+		pass
+	else:		
+		layer_index = layer
+		m_keyword = keyword
+		m_keyword = keyword.split('_')[2:]
+		param_dict = {'value': param,'priority': auto_priority_index,'service':'parameter'}
+		if len(m_keyword) == 1:
+			m_layers[layer_index].update({m_keyword[0]:param_dict})
+		if len(m_keyword) == 2:
+			m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:param_dict})
+		elif len(m_keyword) ==3:			
+			m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:param_dict})
+		m_namespace.update(dict([('layer',m_layers)]))</string>
 	<key>SCRIPT_MESSAGE</key>
 	<string></string>
 	<key>SCRIPT_PAUSEEVENT</key>
@@ -104,9 +131,9 @@ json.dumps(m_namespace, ensure_ascii=False)
 	<key>SCRIPT_SERIALIZE</key>
 	<string></string>
 	<key>SHORT_DESCRIPTION</key>
-	<string></string>
+	<string>This module generates a dictionary with the whole namespace of modul8</string>
 	<key>VERSION</key>
-	<string></string>
+	<string>0.1</string>
 	<key>WINDOW_HEIGHT</key>
 	<real>50</real>
 	<key>WINDOW_WIDTH</key>
