@@ -5,13 +5,110 @@
 	<key>AUTHOR</key>
 	<string>Renaud Rubiano - Studio Mirio</string>
 	<key>CONTROLS</key>
-	<array/>
+	<array>
+		<dict>
+			<key>AUTOSERIALIZE</key>
+			<integer>1</integer>
+			<key>CAPTION</key>
+			<string>print namespace</string>
+			<key>CONTINOUS_MODE</key>
+			<false/>
+			<key>DEFAULT_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_4</key>
+			<real>3.1235778044273617e-311</real>
+			<key>DEFAULT_FLOAT_VALUE_5</key>
+			<real>4.6052352914508432e-319</real>
+			<key>EXC_GROUP</key>
+			<string></string>
+			<key>GROUP</key>
+			<string></string>
+			<key>HEIGHT</key>
+			<real>15.703125</real>
+			<key>HIDDEN</key>
+			<integer>0</integer>
+			<key>LINEFEED_MODE</key>
+			<false/>
+			<key>LISTBOX_INIT_MODE</key>
+			<string>INIT_WITH_STRING_LIST</string>
+			<key>LISTBOX_STRING_LIST</key>
+			<string></string>
+			<key>LISTBOX_VALUE_MODE</key>
+			<string>ABS_POSITION</string>
+			<key>LIVE_MODE</key>
+			<false/>
+			<key>MAX_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_3</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_4</key>
+			<real>0.0</real>
+			<key>MAX_FLOAT_VALUE_5</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_4</key>
+			<real>2.414831210118974e-311</real>
+			<key>MIN_FLOAT_VALUE_5</key>
+			<real>6.3464862315768461e-309</real>
+			<key>NAME</key>
+			<string>Untitled</string>
+			<key>PREVIEW_MEDIA_MODE</key>
+			<integer>0</integer>
+			<key>RADIUS_0</key>
+			<real>4</real>
+			<key>RADIUS_1</key>
+			<real>4</real>
+			<key>RADIUS_2</key>
+			<real>4</real>
+			<key>RADIUS_3</key>
+			<real>4</real>
+			<key>SCRIPT_MESSAGE</key>
+			<string>print_namespace</string>
+			<key>SELECTED</key>
+			<false/>
+			<key>SHAPE_DOTS</key>
+			<true/>
+			<key>TEXT_ALIGNEMENT</key>
+			<string>LEFT</string>
+			<key>TOGGLE_MODE</key>
+			<false/>
+			<key>TYPE</key>
+			<string>BUTTON</string>
+			<key>UI_MAPS</key>
+			<array/>
+			<key>UNIQUE_ID</key>
+			<integer>1</integer>
+			<key>WIDTH</key>
+			<real>97.03515625</real>
+			<key>X</key>
+			<real>57</real>
+			<key>Y</key>
+			<real>5</real>
+		</dict>
+	</array>
 	<key>DESCRIPTION</key>
 	<string></string>
 	<key>MODULE_AUTOFLUSH</key>
 	<false/>
 	<key>MODULE_CONTROL_ID_COUNTER</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>MODULE_LAYER_CONTEXTUAL</key>
 	<false/>
 	<key>MODULE_RESETDIRECTKEY_PAUSED</key>
@@ -31,16 +128,17 @@
 		<key>WINDOW_MINIMIZED</key>
 		<false/>
 		<key>WINDOW_X</key>
-		<real>132</real>
+		<real>1255</real>
 		<key>WINDOW_Y</key>
-		<real>978</real>
+		<real>917</real>
 	</dict>
 	<key>SCRIPT_CLEANUP</key>
 	<string></string>
 	<key>SCRIPT_DESERIALIZE</key>
 	<string></string>
 	<key>SCRIPT_EVENT</key>
-	<string>if type == 'OSC':
+	<string># incoming OSC messages
+if type == 'OSC':
 	#this is a query
 	if '?' in param['address']:
 		sender = param['address'].split('?')[0]
@@ -56,32 +154,26 @@
 		print 'OSC message' , param['address'] , param['args'][0]
 	#this is an answer (it won't be used for the 0.1 version of this module)
 	elif ':' in param['address']:
-		print 'answer'		
-	
-	
-	
-#&gt;Input : via DirecEvent(type,param)
-#type == 'OSC'
-#param contains :
- #address: OSC address of the message
- #args: a list of arguments
- #timestamp: time when OSC message was received</string>
+		print 'answer'		</string>
 	<key>SCRIPT_INIT</key>
 	<string>
 # Namespace Module
 # Renaud Rubiano - Studio Mirio - 2014
 
-#import json
-from pprint import pprint
-
 #make a dictionary with the whole namespace when loading the module
+
+#nodes have data and attributes dict
+#parameters are in the data dict of its parent node
+#parameters have attributes dict
 
 #m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
 m_namespace = {}
+m_namespace.update({'master':{}})
 #m_namespace.setdefault('application',{})
 #m_namespace['application'].update(m_app)
 m_master = {}
 m_master.update({'attributes':{'service':'model','tags':' ','priority': 1}})
+m_master.update({'data':{}})
 m_layers = {}
 auto_priority_index = 1
 
@@ -90,14 +182,18 @@ for keyword in modul8.getValue ('info_keywords',0) :
 	valueKeyw = modul8.getValue (keyword,layer_index)
 	#List of master controls
 	if keyword.startswith ('ctrl_master') :
-		m_master.update({'data':{}})
-		keyword = keyword.split('_')[2:]
+		m_keyword = keyword.split('_')[2:]
 		auto_priority_index = auto_priority_index + 1
-		keyword = '/'.join(keyword)
-		m_master['data'].setdefault(keyword,{})
-		m_master['data'][keyword].update([('value' , valueKeyw),('priority',auto_priority_index),('tags',' '),('service','parameter')])
-		# on y est presuqeu = plus qu'aà créer le master dans m_namespace et faire l'update au lieu de remplacer
-		m_namespace['master']['data'].update(m_master)
+		#keyword = '/'.join(keyword)
+		m_keyword = keyword.split('_')[2:]
+		param_dict = {'attributes' : {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' ' , 'rangeBounds' : [0,1] , 'rangeClipmode' : 'both'}}
+		if len(m_keyword) == 1:
+			m_master['data'].update({m_keyword[0]:param_dict})
+		if len(m_keyword) == 2:
+			m_master['data'].setdefault(m_keyword[0],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+			m_master['data'][m_keyword[0]]['data'].update({m_keyword[1]:param_dict})
+		#m_master['data'].setdefault(keyword,{'value' : valueKeyw , 'priority' : auto_priority_index , 'tags' : ' ' , 'service' : 'parameter'})
+		m_namespace['master'].update(m_master)
 	elif keyword.startswith ('ctrl_layer') :
 		#these are not usefull in our case
 		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
@@ -105,30 +201,33 @@ for keyword in modul8.getValue ('info_keywords',0) :
 		else:
 			for layer_index in range(1,2):
 				layer_index = 'layer.' + str(layer_index)
-				m_layers.setdefault(layer_index,{'service':'model','tags':' ','priority': auto_priority_index})
 				auto_priority_index = auto_priority_index + 1
+				m_layers.setdefault(layer_index,{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
 				m_keyword = keyword
 				m_keyword = keyword.split('_')[2:]
-				param_dict = {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' '}
+				param_dict = {'attributes' : {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' ' , 'rangeBounds' : [0,1] , 'rangeClipmode' : 'both'}}
+				#don't know why but this param has an empty value at the end…
+				if m_keyword == ['auto' , 'scaleXY' , '']:
+					m_keyword = m_keyword[0:2]
 				if len(m_keyword) == 1:
-					m_layers[layer_index].update({m_keyword[0]:param_dict})
+					m_layers[layer_index]['data'].update({m_keyword[0]:param_dict})
 				if len(m_keyword) == 2:
-					m_layers[layer_index].setdefault(m_keyword[0],{})
-					m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:param_dict})
-				elif len(m_keyword) ==3:			
-					m_layers[layer_index][m_keyword[0]].setdefault(m_keyword[1],{})
-					m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:param_dict})
-			#m_namespace.update(m_layers)
+					m_layers[layer_index]['data'].setdefault(m_keyword[0],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+					m_layers[layer_index]['data'][m_keyword[0]]['data'].update({m_keyword[1]:param_dict})
+				elif len(m_keyword) ==3:
+					if m_keyword[1] == 'auto':
+						m_layers[layer_index]['data'][m_keyword[0]]['data'].setdefault(m_keyword[1],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index}})
+						m_layers[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]].update({m_keyword[2]:param_dict})
+					else:
+						m_layers[layer_index]['data'][m_keyword[0]]['data'].setdefault(m_keyword[1],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+						m_layers[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['data'].update({m_keyword[2]:param_dict})
+			m_namespace.update(m_layers)
 
-
-#share the namespace with other modules
-module.getSharedDictionary()['namespace'] = m_namespace
-
-
+# ------DEBUG------
+#from pprint import pprint
 #pprint(m_layers)	
-pprint(m_master)	
+#pprint(m_master)	
 #pprint(m_namespace)
-#json.dumps(m_namespace, ensure_ascii=False)
 
 
 #minuit module
@@ -136,6 +235,7 @@ import socket
 
 def oscquery (sender,query,node):
 	print 'OSC-QUERY' , sender,query,node
+	#this is a namespace query
 	if query == 'namespace':
 		address = 'modul8:namespace'
 		if node == '/' :
@@ -145,27 +245,49 @@ def oscquery (sender,query,node):
 			modul8.sendOSC(address,answer)
 		else:
 			if len(node.split('/')) &gt; 2:
-				if node.split('/')[2] == 'tags':
-					pass
-				elif node.split('/')[2] == 'priority':
-					pass
-				elif node.split('/')[2] == 'service':
-					pass
-			else:
-				m_node = node.split('/')[1]
-				answer = [node , 'Container' , 'nodes={' , m_namespace[m_node].keys() , '}' , 'attributes={' , 'service' , '}']
+				# need to know if it is a node or a leaf
+				# a node has a data content, and a leaf hasn't
+				m_node = node.split('/')[1:]
+				if len(m_node) == 2:
+					if 'data' in m_namespace[m_node[0]]['data'][m_node[1]].keys():
+						answer = [node , 'Container' , 'nodes={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+					else:
+						answer = [node , 'Data' , 'attributes ={' , m_namespace[m_node[0]]['data'][m_node[1]]['attributes'].keys() , '}']
+				elif len(m_node) == 3:
+					if 'data' in m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]].keys():
+						answer = [node , 'Container' , 'nodes={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+					else:
+						answer = [node , 'Data' , 'attributes ={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'].keys() , '}']
+				elif len(m_node) == 4:
+					if 'data' in m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]].keys():
+						answer = [node , 'Container' , 'nodes={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+					else:
+						answer = [node , 'Data' , 'attributes ={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'].keys() , '}']
 				print 'ANSWER____2' , answer
 				modul8.sendOSC(address,answer)
+			else:
+				m_node = node.split('/')[1]
+				answer = [node , 'Container' , 'nodes={' , m_namespace[m_node]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+				print 'ANSWER____3' , answer
+				modul8.sendOSC(address,answer)
+	#this is a get query
 	elif query == 'get':
 		address = 'modul8:get'
-		print 'GET' , node
-		m_node = node.split('/')[1]
-		m_node = m_node.split(':')[0]
-		get_request = node.split(':')[1]
-		print 'M_NODE' , m_node
-		print 'get_request' , get_request
-		answer = [node , m_namespace[m_node][get_request]]
-		print 'ANSWER____3' , answer
+		m_node = node.split(':')[:1][0]
+		m_node = m_node.split('/')
+		m_node = m_node[1:]
+		get_request = node.split(':')[1:][0]
+		if len(m_node) == 1:
+			answer = [node , m_namespace[m_node[0]]['attributes'][get_request]]
+		elif len(m_node) == 2:
+			print m_node
+			answer = [node , m_namespace[m_node[0]]['data'][m_node[1]]['attributes'][get_request]]
+		elif len(m_node) == 3:
+			answer = [node , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'][get_request]]
+		elif len(m_node) == 4:
+			print '3' , m_node
+			answer = [node , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'][get_request]]
+		print 'ANSWER____4' , answer
 		modul8.sendOSC(address,answer)
 		
 		
@@ -175,37 +297,35 @@ def oscquery (sender,query,node):
 	<string>#this is a master parameter
 if keyword.startswith ('ctrl_master') :	
 	#List of master controls
-	keyword = keyword.split('_')[2:]
-	keyword = '/'.join(keyword)
-	m_master[keyword] = dict([('value' , param),('priority',auto_priority_index)])
-	m_namespace.update(dict([('master',m_master)]))
-	#pprint (m_master)	
+	m_keyword = keyword.split('_')[2:]
+	#keyword = '/'.join(keyword)
+	m_keyword = m_keyword
+	print m_keyword
+	if len(m_keyword) == 1:
+		m_namespace['master']['data'][m_keyword[0]]['attributes']['value'] = param
+	if len(m_keyword) == 2:
+		m_namespace['master']['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
 #this is a layer parameter
 elif keyword.startswith ('ctrl_layer') :
 	#these are not usefull in our case
 	if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
 		pass
 	else:		
-		layer_index = layer
+		layer_index = 'layer.' + str(layer)
 		m_keyword = keyword
 		m_keyword = keyword.split('_')[2:]
-		param_dict = {'value': param,'priority': auto_priority_index,'service':'parameter'}
+		param_dict = {'value': param}
 		if len(m_keyword) == 1:
-			m_layers[layer_index].update({m_keyword[0]:param_dict})
+			m_namespace[layer_index]['data'][m_keyword[0]]['attributes']['value'] = param
 		if len(m_keyword) == 2:
-			m_layers[layer_index][m_keyword[0]].update({m_keyword[1]:param_dict})
-		elif len(m_keyword) ==3:			
-			m_layers[layer_index][m_keyword[0]][m_keyword[1]].update({m_keyword[2]:param_dict})
-		m_namespace.update(dict([('layer',m_layers)]))
-
-
-
-
-#share the namespace with other modules
-module.getSharedDictionary()['namespace'] = m_namespace
+			m_namespace[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
+		elif len(m_keyword) ==3:
+			m_namespace[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['data'][m_keyword[2]]['attributes']['value'] = param
 </string>
 	<key>SCRIPT_MESSAGE</key>
-	<string></string>
+	<string>#message from the module interface
+if msg:
+	print m_namespace</string>
 	<key>SCRIPT_PAUSEEVENT</key>
 	<string></string>
 	<key>SCRIPT_PERIODICAL</key>
