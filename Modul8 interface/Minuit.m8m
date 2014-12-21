@@ -10,13 +10,13 @@
 			<key>AUTOSERIALIZE</key>
 			<integer>1</integer>
 			<key>CAPTION</key>
-			<string>print namespace</string>
+			<string>print namespace dict</string>
 			<key>CONTINOUS_MODE</key>
 			<false/>
 			<key>DEFAULT_FLOAT_VALUE_0</key>
 			<real>1</real>
 			<key>DEFAULT_FLOAT_VALUE_1</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>DEFAULT_FLOAT_VALUE_2</key>
 			<real>0.0</real>
 			<key>DEFAULT_FLOAT_VALUE_3</key>
@@ -30,7 +30,7 @@
 			<key>GROUP</key>
 			<string></string>
 			<key>HEIGHT</key>
-			<real>15.703125</real>
+			<real>19.890625</real>
 			<key>HIDDEN</key>
 			<integer>0</integer>
 			<key>LINEFEED_MODE</key>
@@ -96,11 +96,491 @@
 			<key>UNIQUE_ID</key>
 			<integer>1</integer>
 			<key>WIDTH</key>
-			<real>97.03515625</real>
+			<real>163.69921875</real>
 			<key>X</key>
-			<real>57</real>
+			<real>16</real>
 			<key>Y</key>
-			<real>5</real>
+			<real>32</real>
+		</dict>
+		<dict>
+			<key>AUTOSERIALIZE</key>
+			<integer>1</integer>
+			<key>CAPTION</key>
+			<string>print OSC INPUT</string>
+			<key>CONTINOUS_MODE</key>
+			<false/>
+			<key>DEFAULT_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_4</key>
+			<real>8.4879831638610893e-314</real>
+			<key>DEFAULT_FLOAT_VALUE_5</key>
+			<real>4.9406564584124654e-323</real>
+			<key>EXC_GROUP</key>
+			<string></string>
+			<key>GROUP</key>
+			<string></string>
+			<key>HEIGHT</key>
+			<real>19.40234375</real>
+			<key>HIDDEN</key>
+			<integer>0</integer>
+			<key>LINEFEED_MODE</key>
+			<false/>
+			<key>LISTBOX_INIT_MODE</key>
+			<string>INIT_WITH_STRING_LIST</string>
+			<key>LISTBOX_STRING_LIST</key>
+			<string></string>
+			<key>LISTBOX_VALUE_MODE</key>
+			<string>ABS_POSITION</string>
+			<key>LIVE_MODE</key>
+			<false/>
+			<key>MAX_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_3</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_4</key>
+			<real>2.0430087415929317e+235</real>
+			<key>MAX_FLOAT_VALUE_5</key>
+			<real>0.0027956501483572555</real>
+			<key>MIN_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_4</key>
+			<real>6.2024603364684129e-248</real>
+			<key>MIN_FLOAT_VALUE_5</key>
+			<real>2.7813423231340067e-309</real>
+			<key>NAME</key>
+			<string>Untitled</string>
+			<key>PREVIEW_MEDIA_MODE</key>
+			<integer>0</integer>
+			<key>RADIUS_0</key>
+			<real>4</real>
+			<key>RADIUS_1</key>
+			<real>4</real>
+			<key>RADIUS_2</key>
+			<real>4</real>
+			<key>RADIUS_3</key>
+			<real>4</real>
+			<key>SCRIPT_MESSAGE</key>
+			<string>log_osc_in</string>
+			<key>SELECTED</key>
+			<false/>
+			<key>SHAPE_DOTS</key>
+			<true/>
+			<key>TEXT_ALIGNEMENT</key>
+			<string>LEFT</string>
+			<key>TOGGLE_MODE</key>
+			<true/>
+			<key>TYPE</key>
+			<string>BUTTON</string>
+			<key>UI_MAPS</key>
+			<array/>
+			<key>UNIQUE_ID</key>
+			<integer>4</integer>
+			<key>WIDTH</key>
+			<real>162.33203125</real>
+			<key>X</key>
+			<real>17</real>
+			<key>Y</key>
+			<real>144</real>
+		</dict>
+		<dict>
+			<key>AUTOSERIALIZE</key>
+			<integer>1</integer>
+			<key>CAPTION</key>
+			<string>print MINUIT INPUT</string>
+			<key>CONTINOUS_MODE</key>
+			<false/>
+			<key>DEFAULT_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_4</key>
+			<real>8.4879831638610893e-314</real>
+			<key>DEFAULT_FLOAT_VALUE_5</key>
+			<real>4.9406564584124654e-323</real>
+			<key>EXC_GROUP</key>
+			<string></string>
+			<key>GROUP</key>
+			<string></string>
+			<key>HEIGHT</key>
+			<real>19.40234375</real>
+			<key>HIDDEN</key>
+			<integer>0</integer>
+			<key>LINEFEED_MODE</key>
+			<false/>
+			<key>LISTBOX_INIT_MODE</key>
+			<string>INIT_WITH_STRING_LIST</string>
+			<key>LISTBOX_STRING_LIST</key>
+			<string></string>
+			<key>LISTBOX_VALUE_MODE</key>
+			<string>ABS_POSITION</string>
+			<key>LIVE_MODE</key>
+			<false/>
+			<key>MAX_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_3</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_4</key>
+			<real>2.0430087415929317e+235</real>
+			<key>MAX_FLOAT_VALUE_5</key>
+			<real>0.0027956501483572555</real>
+			<key>MIN_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_4</key>
+			<real>6.2024603364684129e-248</real>
+			<key>MIN_FLOAT_VALUE_5</key>
+			<real>2.7813423231340067e-309</real>
+			<key>NAME</key>
+			<string>Untitled</string>
+			<key>PREVIEW_MEDIA_MODE</key>
+			<integer>0</integer>
+			<key>RADIUS_0</key>
+			<real>4</real>
+			<key>RADIUS_1</key>
+			<real>4</real>
+			<key>RADIUS_2</key>
+			<real>4</real>
+			<key>RADIUS_3</key>
+			<real>4</real>
+			<key>SCRIPT_MESSAGE</key>
+			<string>log_minuit_in</string>
+			<key>SELECTED</key>
+			<false/>
+			<key>SHAPE_DOTS</key>
+			<true/>
+			<key>TEXT_ALIGNEMENT</key>
+			<string>LEFT</string>
+			<key>TOGGLE_MODE</key>
+			<true/>
+			<key>TYPE</key>
+			<string>BUTTON</string>
+			<key>UI_MAPS</key>
+			<array/>
+			<key>UNIQUE_ID</key>
+			<integer>5</integer>
+			<key>WIDTH</key>
+			<real>162.33203125</real>
+			<key>X</key>
+			<real>16</real>
+			<key>Y</key>
+			<real>88</real>
+		</dict>
+		<dict>
+			<key>AUTOSERIALIZE</key>
+			<integer>1</integer>
+			<key>CAPTION</key>
+			<string>print MINUIT OUTPUT</string>
+			<key>CONTINOUS_MODE</key>
+			<false/>
+			<key>DEFAULT_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_4</key>
+			<real>8.4879831638610893e-314</real>
+			<key>DEFAULT_FLOAT_VALUE_5</key>
+			<real>4.9406564584124654e-323</real>
+			<key>EXC_GROUP</key>
+			<string></string>
+			<key>GROUP</key>
+			<string></string>
+			<key>HEIGHT</key>
+			<real>19.40234375</real>
+			<key>HIDDEN</key>
+			<integer>0</integer>
+			<key>LINEFEED_MODE</key>
+			<false/>
+			<key>LISTBOX_INIT_MODE</key>
+			<string>INIT_WITH_STRING_LIST</string>
+			<key>LISTBOX_STRING_LIST</key>
+			<string></string>
+			<key>LISTBOX_VALUE_MODE</key>
+			<string>ABS_POSITION</string>
+			<key>LIVE_MODE</key>
+			<false/>
+			<key>MAX_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_3</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_4</key>
+			<real>2.0430087415929317e+235</real>
+			<key>MAX_FLOAT_VALUE_5</key>
+			<real>0.0027956501483572555</real>
+			<key>MIN_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_4</key>
+			<real>6.2024603364684129e-248</real>
+			<key>MIN_FLOAT_VALUE_5</key>
+			<real>2.7813423231340067e-309</real>
+			<key>NAME</key>
+			<string>Untitled</string>
+			<key>PREVIEW_MEDIA_MODE</key>
+			<integer>0</integer>
+			<key>RADIUS_0</key>
+			<real>4</real>
+			<key>RADIUS_1</key>
+			<real>4</real>
+			<key>RADIUS_2</key>
+			<real>4</real>
+			<key>RADIUS_3</key>
+			<real>4</real>
+			<key>SCRIPT_MESSAGE</key>
+			<string>log_minuit_out</string>
+			<key>SELECTED</key>
+			<false/>
+			<key>SHAPE_DOTS</key>
+			<true/>
+			<key>TEXT_ALIGNEMENT</key>
+			<string>LEFT</string>
+			<key>TOGGLE_MODE</key>
+			<true/>
+			<key>TYPE</key>
+			<string>BUTTON</string>
+			<key>UI_MAPS</key>
+			<array/>
+			<key>UNIQUE_ID</key>
+			<integer>6</integer>
+			<key>WIDTH</key>
+			<real>162.33203125</real>
+			<key>X</key>
+			<real>16</real>
+			<key>Y</key>
+			<real>64</real>
+		</dict>
+		<dict>
+			<key>AUTOSERIALIZE</key>
+			<integer>1</integer>
+			<key>CAPTION</key>
+			<string>print OSC OUTPUT</string>
+			<key>CONTINOUS_MODE</key>
+			<false/>
+			<key>DEFAULT_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_4</key>
+			<real>8.4879831638610893e-314</real>
+			<key>DEFAULT_FLOAT_VALUE_5</key>
+			<real>4.9406564584124654e-323</real>
+			<key>EXC_GROUP</key>
+			<string></string>
+			<key>GROUP</key>
+			<string></string>
+			<key>HEIGHT</key>
+			<real>19.40234375</real>
+			<key>HIDDEN</key>
+			<integer>0</integer>
+			<key>LINEFEED_MODE</key>
+			<false/>
+			<key>LISTBOX_INIT_MODE</key>
+			<string>INIT_WITH_STRING_LIST</string>
+			<key>LISTBOX_STRING_LIST</key>
+			<string></string>
+			<key>LISTBOX_VALUE_MODE</key>
+			<string>ABS_POSITION</string>
+			<key>LIVE_MODE</key>
+			<false/>
+			<key>MAX_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_3</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_4</key>
+			<real>2.0430087415929317e+235</real>
+			<key>MAX_FLOAT_VALUE_5</key>
+			<real>0.0027956501483572555</real>
+			<key>MIN_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_4</key>
+			<real>6.2024603364684129e-248</real>
+			<key>MIN_FLOAT_VALUE_5</key>
+			<real>2.7813423231340067e-309</real>
+			<key>NAME</key>
+			<string>Untitled</string>
+			<key>PREVIEW_MEDIA_MODE</key>
+			<integer>0</integer>
+			<key>RADIUS_0</key>
+			<real>4</real>
+			<key>RADIUS_1</key>
+			<real>4</real>
+			<key>RADIUS_2</key>
+			<real>4</real>
+			<key>RADIUS_3</key>
+			<real>4</real>
+			<key>SCRIPT_MESSAGE</key>
+			<string>log_osc_out</string>
+			<key>SELECTED</key>
+			<false/>
+			<key>SHAPE_DOTS</key>
+			<true/>
+			<key>TEXT_ALIGNEMENT</key>
+			<string>LEFT</string>
+			<key>TOGGLE_MODE</key>
+			<true/>
+			<key>TYPE</key>
+			<string>BUTTON</string>
+			<key>UI_MAPS</key>
+			<array/>
+			<key>UNIQUE_ID</key>
+			<integer>7</integer>
+			<key>WIDTH</key>
+			<real>162.33203125</real>
+			<key>X</key>
+			<real>17</real>
+			<key>Y</key>
+			<real>120</real>
+		</dict>
+		<dict>
+			<key>AUTOSERIALIZE</key>
+			<integer>1</integer>
+			<key>CAPTION</key>
+			<string>print listen dict</string>
+			<key>CONTINOUS_MODE</key>
+			<false/>
+			<key>DEFAULT_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>DEFAULT_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>DEFAULT_FLOAT_VALUE_4</key>
+			<real>3.1235778044273617e-311</real>
+			<key>DEFAULT_FLOAT_VALUE_5</key>
+			<real>4.6052352914508432e-319</real>
+			<key>EXC_GROUP</key>
+			<string></string>
+			<key>GROUP</key>
+			<string></string>
+			<key>HEIGHT</key>
+			<real>19.890625</real>
+			<key>HIDDEN</key>
+			<integer>0</integer>
+			<key>LINEFEED_MODE</key>
+			<false/>
+			<key>LISTBOX_INIT_MODE</key>
+			<string>INIT_WITH_STRING_LIST</string>
+			<key>LISTBOX_STRING_LIST</key>
+			<string></string>
+			<key>LISTBOX_VALUE_MODE</key>
+			<string>ABS_POSITION</string>
+			<key>LIVE_MODE</key>
+			<false/>
+			<key>MAX_FLOAT_VALUE_0</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_1</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_2</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_3</key>
+			<real>1</real>
+			<key>MAX_FLOAT_VALUE_4</key>
+			<real>0.0</real>
+			<key>MAX_FLOAT_VALUE_5</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_0</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_1</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_2</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_3</key>
+			<real>0.0</real>
+			<key>MIN_FLOAT_VALUE_4</key>
+			<real>2.414831210118974e-311</real>
+			<key>MIN_FLOAT_VALUE_5</key>
+			<real>6.3464862315768461e-309</real>
+			<key>NAME</key>
+			<string>Untitled</string>
+			<key>PREVIEW_MEDIA_MODE</key>
+			<integer>0</integer>
+			<key>RADIUS_0</key>
+			<real>4</real>
+			<key>RADIUS_1</key>
+			<real>4</real>
+			<key>RADIUS_2</key>
+			<real>4</real>
+			<key>RADIUS_3</key>
+			<real>4</real>
+			<key>SCRIPT_MESSAGE</key>
+			<string>print_listen</string>
+			<key>SELECTED</key>
+			<false/>
+			<key>SHAPE_DOTS</key>
+			<true/>
+			<key>TEXT_ALIGNEMENT</key>
+			<string>LEFT</string>
+			<key>TOGGLE_MODE</key>
+			<false/>
+			<key>TYPE</key>
+			<string>BUTTON</string>
+			<key>UI_MAPS</key>
+			<array/>
+			<key>UNIQUE_ID</key>
+			<integer>8</integer>
+			<key>WIDTH</key>
+			<real>163.69921875</real>
+			<key>X</key>
+			<real>16</real>
+			<key>Y</key>
+			<real>8</real>
 		</dict>
 	</array>
 	<key>DESCRIPTION</key>
@@ -110,7 +590,7 @@ https://github.com/Minuit/minuit</string>
 	<key>MODULE_AUTOFLUSH</key>
 	<false/>
 	<key>MODULE_CONTROL_ID_COUNTER</key>
-	<integer>1</integer>
+	<integer>8</integer>
 	<key>MODULE_LAYER_CONTEXTUAL</key>
 	<false/>
 	<key>MODULE_RESETDIRECTKEY_PAUSED</key>
@@ -130,9 +610,9 @@ https://github.com/Minuit/minuit</string>
 		<key>WINDOW_MINIMIZED</key>
 		<false/>
 		<key>WINDOW_X</key>
-		<real>1206</real>
+		<real>280</real>
 		<key>WINDOW_Y</key>
-		<real>936</real>
+		<real>289</real>
 	</dict>
 	<key>SCRIPT_CLEANUP</key>
 	<string></string>
@@ -143,6 +623,7 @@ https://github.com/Minuit/minuit</string>
 if type == 'OSC':
 	#this is a query
 	if '?' in param['address']:
+		if print_minuit_input : print "MINUIT INPUT : ",  param['address'] , param['args']
 		sender = param['address'].split('?')[0]
 		query = param['address'].split('?')[1]
 		node = param['args'][0]
@@ -150,9 +631,11 @@ if type == 'OSC':
 		oscquery(sender,query,node,args)
 	#this is an error
 	elif '!' in param['address']:
+		if print_minuit_input : print "MINUIT ERROR : ",  param['address'] , param['args']
 		print 'error'	
 	#this is an OSC message
 	elif '/' == param['address'][0]:
+		if print_osc_input : print "OSC INPUT : ", param['address'] , param['args']
 		keyword = param['address']
 		keyword = keyword.split('/')[1:]
 		if keyword[0] == 'master':
@@ -170,9 +653,18 @@ if type == 'OSC':
 		modul8.setValue(keyword, param['args'][0], layer_index)
 	#this is an answer (it won't be used for the 0.1 version of this module)
 	elif ':' in param['address']:
+		if print_minuit_input : print "MINUIT INPUT : ",  param['address'] , param['args']
 		print 'answer'		</string>
 	<key>SCRIPT_INIT</key>
 	<string>from pprint import pprint
+
+
+#interface
+print_osc_input = False
+print_osc_output = False
+print_minuit_input = False
+print_minuit_output = False
+
 
 # Namespace Module
 # Renaud Rubiano - Studio Mirio - 2014
@@ -282,21 +774,19 @@ m_listen = {}
 
 
 def oscquery (sender,query,node,args):
-	print 'OSC-QUERY' , sender,query,node
 	#this is a 'namespace' query
 	if query == 'namespace':
 		address = 'modul8:namespace'
 		if node == '/' :
 			attributes = ['version' , 'name' , 'author']
 			answer = ['/' , 'Application' , 'nodes={' , m_namespace['data'].keys() , '}' , 'attributes={' , attributes , '}']
-			print 'ANSWER_____1' , answer
+			if print_minuit_output : print "MINUIT OUTPUT : ", address , answer
 			modul8.sendOSC(address,answer)
 		else:
 			if len(node.split('/')) &gt; 2:
 				# need to know if it is a node or a leaf
 				# a node has a data content, and a leaf hasn't
 				m_node = node.split('/')[1:]
-				print 'ZZZ' , m_node
 				if len(m_node) == 2:
 					if 'data' in m_namespace['data'][m_node[0]]['data'][m_node[1]].keys():
 						answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
@@ -312,12 +802,12 @@ def oscquery (sender,query,node,args):
 						answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
 					else:
 						answer = [node , 'Data' , 'attributes ={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'].keys() , '}']
-				print 'ANSWER____NAMESPACE COMPLEX' , answer
+				if print_minuit_output : print "MINUIT OUTPUT : ", address , answer
 				modul8.sendOSC(address,answer)
 			else:
 				m_node = node.split('/')[1]
 				answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
-				print 'ANSWER____SIMPLE' , answer
+				if print_minuit_output : print "MINUIT OUTPUT : ", address , answer
 				modul8.sendOSC(address,answer)
 	#this is a 'get' query
 	elif query == 'get':
@@ -326,7 +816,6 @@ def oscquery (sender,query,node,args):
 		get_request = node.split(':')[1:][0]
 		if m_node == '/':
 			answer = [node , m_namespace['attributes'][get_request]]
-			print 'ANSWER____GET_APPLICATION' , answer
 		else:			
 			m_node = m_node.split('/')
 			m_node = m_node[1:]
@@ -338,9 +827,8 @@ def oscquery (sender,query,node,args):
 			elif len(m_node) == 3:
 				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'][get_request]]
 			elif len(m_node) == 4:
-				print '3' , m_node
 				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'][get_request]]
-			print 'ANSWER____GET' , answer
+		if print_minuit_output : print "MINUIT OUTPUT : ", address , answer
 		modul8.sendOSC(address,answer)
 	#this is a 'listen' query
 	elif query == 'listen':
@@ -362,8 +850,7 @@ def oscquery (sender,query,node,args):
 			m_listen.setdefault(layer_index,{})
 			m_listen[layer_index].update({data:attribut})
 		elif args == 'disable':
-			pass
-		print m_listen</string>
+			del m_listen[layer_index][data]</string>
 	<key>SCRIPT_KEYWORDEVENT</key>
 	<string>#this is a master parameter
 if keyword.startswith ('ctrl_master') :	
@@ -401,13 +888,26 @@ if layer_index in m_listen.keys():
 			keyword = keyword[2:]
 			keyword = '/'.join(keyword)
 			address = '/' + '/'.join([layer_index,keyword])
-			print address , param
+			if print_osc_output : print "OSC OUTPUT : ",  address, param
 			modul8.sendOSC(address , param)
 </string>
 	<key>SCRIPT_MESSAGE</key>
 	<string>#message from the module interface
-if msg:
-	pprint (m_namespace)</string>
+if msg == 'log_osc_in' :
+	print_osc_input =  param['value']
+elif msg == 'log_osc_out' :
+	print_osc_output = param['value']
+elif msg == 'log_minuit_in' :
+	print_minuit_input = param['value']
+elif msg == 'log_minuit_out' :
+	print_minuit_output = param['value']
+elif msg == 'print_namespace' :
+	if param['value'] == 1:
+		pprint (m_namespace)
+elif msg == 'print_listen' :
+	if param['value'] == 1:
+		pprint (m_listen)
+</string>
 	<key>SCRIPT_PAUSEEVENT</key>
 	<string></string>
 	<key>SCRIPT_PERIODICAL</key>
@@ -419,7 +919,7 @@ if msg:
 	<key>VERSION</key>
 	<string>0.1</string>
 	<key>WINDOW_HEIGHT</key>
-	<real>50</real>
+	<real>200</real>
 	<key>WINDOW_WIDTH</key>
 	<real>200</real>
 </dict>
