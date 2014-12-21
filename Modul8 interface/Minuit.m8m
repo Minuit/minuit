@@ -130,9 +130,9 @@ https://github.com/Minuit/minuit</string>
 		<key>WINDOW_MINIMIZED</key>
 		<false/>
 		<key>WINDOW_X</key>
-		<real>1097</real>
+		<real>1206</real>
 		<key>WINDOW_Y</key>
-		<real>956</real>
+		<real>936</real>
 	</dict>
 	<key>SCRIPT_CLEANUP</key>
 	<string></string>
@@ -146,7 +146,8 @@ if type == 'OSC':
 		sender = param['address'].split('?')[0]
 		query = param['address'].split('?')[1]
 		node = param['args'][0]
-		oscquery(sender,query,node)
+		args = param['args'][1:]
+		oscquery(sender,query,node,args)
 	#this is an error
 	elif '!' in param['address']:
 		print 'error'	
@@ -159,6 +160,11 @@ if type == 'OSC':
 			keyword = 'ctrl_' + '_'.join(keyword)
 		else:
 			layer_index = keyword[0].split('.')[1]
+			# support wildcard for instances
+			if layer_index == '*':
+				layer_index = -1
+			else:
+				layer_index = int(layer_index)
 			keyword = keyword[1:]
 			keyword = 'ctrl_layer_' + '_'.join(keyword)
 		modul8.setValue(keyword, param['args'][0], layer_index)
@@ -166,72 +172,101 @@ if type == 'OSC':
 	elif ':' in param['address']:
 		print 'answer'		</string>
 	<key>SCRIPT_INIT</key>
-	<string>
+	<string>from pprint import pprint
+
 # Namespace Module
 # Renaud Rubiano - Studio Mirio - 2014
 
 #make a dictionary with the whole namespace when loading the module
+#container have 'data' and 'attributes' dict
+#parameters have 'attributes' dict
+#parameters are in the 'data' dict of its parent container
 
-#nodes have data and attributes dict
-#parameters are in the data dict of its parent node
-#parameters have attributes dict
-
-#m_app = {'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)}
+#create the main dictionary
 m_namespace = {}
-m_namespace.update({'master':{}})
-#m_namespace.setdefault('application',{})
-#m_namespace['application'].update(m_app)
+#add application attributes
+m_namespace.setdefault('attributes',{'author':'garagecube','name':'modul8','version': modul8.getValue('info_version',0),'project':modul8.getValue('info_projectName',0)})
+m_namespace.setdefault('data',{})
+#create the master dictionary
 m_master = {}
+#add master attributes
 m_master.update({'attributes':{'service':'model','tags':' ','priority': 1}})
-m_master.update({'data':{}})
+#add master data placeholder
+m_master.setdefault('data' , {})
+#add layers placeholder
 m_layers = {}
+#add master to main dict
+m_namespace['data'].setdefault('master',m_master)
+#define priority index
 auto_priority_index = 1
 
+#get all keywords (aka parameters) from Modul8
 for keyword in modul8.getValue ('info_keywords',0) :
+	#layer index is 0 for all master parameters
 	layer_index = 0
+	#get the current value of this parameter
 	valueKeyw = modul8.getValue (keyword,layer_index)
 	#List of master controls
 	if keyword.startswith ('ctrl_master') :
+		#replace underscore with slash… more OSC-user-friendly
 		m_keyword = keyword.split('_')[2:]
+		#increment priority
 		auto_priority_index = auto_priority_index + 1
-		#keyword = '/'.join(keyword)
 		m_keyword = keyword.split('_')[2:]
+		#define parameters attributes 
 		param_dict = {'attributes' : {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' ' , 'rangeBounds' : [0,1] , 'rangeClipmode' : 'both'}}
 		if len(m_keyword) == 1:
+			#this is a parameter
 			m_master['data'].update({m_keyword[0]:param_dict})
 		if len(m_keyword) == 2:
+			#this is a node
 			m_master['data'].setdefault(m_keyword[0],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+			#this is a parameter
 			m_master['data'][m_keyword[0]]['data'].update({m_keyword[1]:param_dict})
-		#m_master['data'].setdefault(keyword,{'value' : valueKeyw , 'priority' : auto_priority_index , 'tags' : ' ' , 'service' : 'parameter'})
-		m_namespace['master'].update(m_master)
+		
 	elif keyword.startswith ('ctrl_layer') :
+		#This is a layer parameter, not a master one
 		#these are not usefull in our case
 		if keyword == 'ctrl_layerStack_focusPosition' or keyword == 'ctrl_layerStack_positionChange' or keyword == 'ctrl_layer_focused' or keyword == 'id' or keyword == 'ctrl_layer_stackPosition' or keyword == 'ctrl_layerStack_duplicate' or keyword == 'ctrl_layer_activated' or keyword == 'ctrl_layer_id':
 			pass
 		else:
-			for layer_index in range(1,2):
+			#iterate the ten layers
+			for layer_index in range(1,3):
+				#make a nice name for each layer (layer.2)
 				layer_index = 'layer.' + str(layer_index)
+				#increment the priority
 				auto_priority_index = auto_priority_index + 1
+				#create for each layer a dict with attributes and placeholder for data
 				m_layers.setdefault(layer_index,{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
 				m_keyword = keyword
+				#replace underscore with slash… more OSC-user-friendly
 				m_keyword = keyword.split('_')[2:]
+				#define parameters attributes 
 				param_dict = {'attributes' : {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' ' , 'rangeBounds' : [0,1] , 'rangeClipmode' : 'both'}}
 				#don't know why but this param has an empty value at the end…
 				if m_keyword == ['auto' , 'scaleXY' , '']:
 					m_keyword = m_keyword[0:2]
 				if len(m_keyword) == 1:
+					#this is a parameter
 					m_layers[layer_index]['data'].update({m_keyword[0]:param_dict})
 				if len(m_keyword) == 2:
+					#this is a container
 					m_layers[layer_index]['data'].setdefault(m_keyword[0],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+					#this is a parameter
 					m_layers[layer_index]['data'][m_keyword[0]]['data'].update({m_keyword[1]:param_dict})
 				elif len(m_keyword) ==3:
 					if m_keyword[1] == 'auto':
+						#this is a container
 						m_layers[layer_index]['data'][m_keyword[0]]['data'].setdefault(m_keyword[1],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index}})
+						#this is a parameter
 						m_layers[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]].update({m_keyword[2]:param_dict})
 					else:
+						#this is a container
 						m_layers[layer_index]['data'][m_keyword[0]]['data'].setdefault(m_keyword[1],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+						#this is a parameter
 						m_layers[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['data'].update({m_keyword[2]:param_dict})
-			m_namespace.update(m_layers)
+			#update the main dict with the ten layers
+			m_namespace['data'].update(m_layers)
 
 # ------DEBUG------
 #from pprint import pprint
@@ -243,14 +278,17 @@ for keyword in modul8.getValue ('info_keywords',0) :
 #minuit module
 import socket
 
-def oscquery (sender,query,node):
+m_listen = {}
+
+
+def oscquery (sender,query,node,args):
 	print 'OSC-QUERY' , sender,query,node
-	#this is a namespace query
+	#this is a 'namespace' query
 	if query == 'namespace':
 		address = 'modul8:namespace'
 		if node == '/' :
 			attributes = ['version' , 'name' , 'author']
-			answer = ['/' , 'Application' , 'nodes={' , m_namespace.keys() , '}' , 'attributes={' , attributes , '}']
+			answer = ['/' , 'Application' , 'nodes={' , m_namespace['data'].keys() , '}' , 'attributes={' , attributes , '}']
 			print 'ANSWER_____1' , answer
 			modul8.sendOSC(address,answer)
 		else:
@@ -258,51 +296,74 @@ def oscquery (sender,query,node):
 				# need to know if it is a node or a leaf
 				# a node has a data content, and a leaf hasn't
 				m_node = node.split('/')[1:]
+				print 'ZZZ' , m_node
 				if len(m_node) == 2:
-					if 'data' in m_namespace[m_node[0]]['data'][m_node[1]].keys():
-						answer = [node , 'Container' , 'nodes={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+					if 'data' in m_namespace['data'][m_node[0]]['data'][m_node[1]].keys():
+						answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
 					else:
-						answer = [node , 'Data' , 'attributes ={' , m_namespace[m_node[0]]['data'][m_node[1]]['attributes'].keys() , '}']
+						answer = [node , 'Data' , 'attributes ={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['attributes'].keys() , '}']
 				elif len(m_node) == 3:
-					if 'data' in m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]].keys():
-						answer = [node , 'Container' , 'nodes={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+					if 'data' in m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]].keys():
+						answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
 					else:
-						answer = [node , 'Data' , 'attributes ={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'].keys() , '}']
+						answer = [node , 'Data' , 'attributes ={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'].keys() , '}']
 				elif len(m_node) == 4:
-					if 'data' in m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]].keys():
-						answer = [node , 'Container' , 'nodes={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+					if 'data' in m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]].keys():
+						answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
 					else:
-						answer = [node , 'Data' , 'attributes ={' , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'].keys() , '}']
-				print 'ANSWER____2' , answer
+						answer = [node , 'Data' , 'attributes ={' , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'].keys() , '}']
+				print 'ANSWER____NAMESPACE COMPLEX' , answer
 				modul8.sendOSC(address,answer)
 			else:
 				m_node = node.split('/')[1]
-				answer = [node , 'Container' , 'nodes={' , m_namespace[m_node]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
-				print 'ANSWER____3' , answer
+				answer = [node , 'Container' , 'nodes={' , m_namespace['data'][m_node]['data'].keys() , '}' , 'attributes={' 'priority' , 'tags' , 'service' , '}']
+				print 'ANSWER____SIMPLE' , answer
 				modul8.sendOSC(address,answer)
-	#this is a get query
+	#this is a 'get' query
 	elif query == 'get':
 		address = 'modul8:get'
 		m_node = node.split(':')[:1][0]
-		m_node = m_node.split('/')
-		m_node = m_node[1:]
 		get_request = node.split(':')[1:][0]
-		if len(m_node) == 1:
-			answer = [node , m_namespace[m_node[0]]['attributes'][get_request]]
-		elif len(m_node) == 2:
-			print m_node
-			answer = [node , m_namespace[m_node[0]]['data'][m_node[1]]['attributes'][get_request]]
-		elif len(m_node) == 3:
-			answer = [node , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'][get_request]]
-		elif len(m_node) == 4:
-			print '3' , m_node
-			answer = [node , m_namespace[m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'][get_request]]
-		print 'ANSWER____4' , answer
+		if m_node == '/':
+			answer = [node , m_namespace['attributes'][get_request]]
+			print 'ANSWER____GET_APPLICATION' , answer
+		else:			
+			m_node = m_node.split('/')
+			m_node = m_node[1:]
+			if len(m_node) == 1:
+				answer = [node , m_namespace['data'][m_node[0]]['attributes'][get_request]]
+			elif len(m_node) == 2:
+				print m_node
+				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['attributes'][get_request]]
+			elif len(m_node) == 3:
+				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'][get_request]]
+			elif len(m_node) == 4:
+				print '3' , m_node
+				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'][get_request]]
+			print 'ANSWER____GET' , answer
 		modul8.sendOSC(address,answer)
-		
-		
-		
-</string>
+	#this is a 'listen' query
+	elif query == 'listen':
+		address = 'modul8:listen'
+		keyword = node
+		keyword = keyword.split('/')[1:]
+		if keyword[0] == 'master':
+			layer_index = 'master'
+			keyword = 'ctrl_' + '_'.join(keyword)
+		else:
+			layer_index = keyword[0]
+			keyword = keyword[1:]
+			keyword = 'ctrl_layer_' + '_'.join(keyword)
+		args = args[0]
+		data = keyword.split(':')[:1][0]
+		attribut = keyword.split(':')[1]
+		if args == 'enable':
+			#add m_node to 'm_listen' dictionary
+			m_listen.setdefault(layer_index,{})
+			m_listen[layer_index].update({data:attribut})
+		elif args == 'disable':
+			pass
+		print m_listen</string>
 	<key>SCRIPT_KEYWORDEVENT</key>
 	<string>#this is a master parameter
 if keyword.startswith ('ctrl_master') :	
@@ -326,16 +387,27 @@ elif keyword.startswith ('ctrl_layer') :
 		m_keyword = keyword.split('_')[2:]
 		param_dict = {'value': param}
 		if len(m_keyword) == 1:
-			m_namespace[layer_index]['data'][m_keyword[0]]['attributes']['value'] = param
+			m_namespace['data'][layer_index]['data'][m_keyword[0]]['attributes']['value'] = param
 		if len(m_keyword) == 2:
-			m_namespace[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
+			m_namespace['data'][layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
 		elif len(m_keyword) ==3:
-			m_namespace[layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['data'][m_keyword[2]]['attributes']['value'] = param
+			m_namespace['data'][layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['data'][m_keyword[2]]['attributes']['value'] = param
+
+#print layer_index , keyword
+if layer_index in m_listen.keys():
+	if keyword in m_listen[layer_index].keys():
+		if m_listen[layer_index][keyword] == 'value':
+			keyword = keyword.split('_')
+			keyword = keyword[2:]
+			keyword = '/'.join(keyword)
+			address = '/' + '/'.join([layer_index,keyword])
+			print address , param
+			modul8.sendOSC(address , param)
 </string>
 	<key>SCRIPT_MESSAGE</key>
 	<string>#message from the module interface
 if msg:
-	print m_namespace</string>
+	pprint (m_namespace)</string>
 	<key>SCRIPT_PAUSEEVENT</key>
 	<string></string>
 	<key>SCRIPT_PERIODICAL</key>
