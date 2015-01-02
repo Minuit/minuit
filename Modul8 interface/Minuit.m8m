@@ -610,9 +610,9 @@ https://github.com/Minuit/minuit</string>
 		<key>WINDOW_MINIMIZED</key>
 		<false/>
 		<key>WINDOW_X</key>
-		<real>280</real>
+		<real>1495</real>
 		<key>WINDOW_Y</key>
-		<real>289</real>
+		<real>818</real>
 	</dict>
 	<key>SCRIPT_CLEANUP</key>
 	<string></string>
@@ -641,6 +641,10 @@ if type == 'OSC':
 		if keyword[0] == 'master':
 			layer_index = 0
 			keyword = 'ctrl_' + '_'.join(keyword)
+		elif keyword[0] == 'mask':
+			layer_index = 0
+			keyword = 'direct_globalMask_' + '_'.join(keyword[1:])
+			print keyword
 		else:
 			layer_index = keyword[0].split('.')[1]
 			# support wildcard for instances
@@ -685,8 +689,16 @@ m_master = {}
 m_master.update({'attributes':{'service':'model','tags':' ','priority': 1}})
 #add master data placeholder
 m_master.setdefault('data' , {})
+#create the mask dictionary
+m_mask = {}
+#add mask attributes
+m_mask.update({'attributes':{'service':'model','tags':' ','priority': 1}})
+#add mask data placeholder
+m_mask.setdefault('data' , {})
 #add layers placeholder
 m_layers = {}
+#add mask to main dict
+m_namespace['data'].setdefault('mask',m_mask)
 #add master to main dict
 m_namespace['data'].setdefault('master',m_master)
 #define priority index
@@ -699,6 +711,7 @@ for keyword in modul8.getValue ('info_keywords',0) :
 	#get the current value of this parameter
 	valueKeyw = modul8.getValue (keyword,layer_index)
 	#List of master controls
+	# #################################### THE MASTER #########################################
 	if keyword.startswith ('ctrl_master') :
 		#replace underscore with slash… more OSC-user-friendly
 		m_keyword = keyword.split('_')[2:]
@@ -715,7 +728,26 @@ for keyword in modul8.getValue ('info_keywords',0) :
 			m_master['data'].setdefault(m_keyword[0],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
 			#this is a parameter
 			m_master['data'][m_keyword[0]]['data'].update({m_keyword[1]:param_dict})
-		
+			
+	# #################################### THE GLOBAL MASK  #########################################
+	elif keyword.startswith ('direct_globalMask') :	
+		#replace underscore with slash… more OSC-user-friendly
+		m_keyword = keyword.split('_')[2:]
+		#increment priority
+		auto_priority_index = auto_priority_index + 1
+		m_keyword = keyword.split('_')[2:]
+		#define parameters attributes 
+		param_dict = {'attributes' : {'value': valueKeyw,'priority': auto_priority_index,'service':'parameter','tags':' ' , 'rangeBounds' : [0,1] , 'rangeClipmode' : 'both'}}
+		if len(m_keyword) == 1:
+			#this is a parameter
+			m_mask['data'].update({m_keyword[0]:param_dict})
+		if len(m_keyword) == 2:
+			#this is a node
+			m_mask['data'].setdefault(m_keyword[0],{'attributes' : {'service':'model','tags':' ','priority': auto_priority_index} , 'data' : {}})
+			#this is a parameter
+			m_mask['data'][m_keyword[0]]['data'].update({m_keyword[1]:param_dict})
+
+	# #################################### THE LAYERS  #########################################
 	elif keyword.startswith ('ctrl_layer') :
 		#This is a layer parameter, not a master one
 		#these are not usefull in our case
@@ -764,7 +796,9 @@ for keyword in modul8.getValue ('info_keywords',0) :
 #from pprint import pprint
 #pprint(m_layers)	
 #pprint(m_master)	
+#pprint(m_mask)	
 #pprint(m_namespace)
+#pprint(m_namespace['data']['master']['data']['mask'])
 
 
 #minuit module
@@ -837,6 +871,9 @@ def oscquery (sender,query,node,args):
 		keyword = keyword.split('/')[1:]
 		if keyword[0] == 'master':
 			layer_index = 'master'
+			keyword = 'ctrl_' + '_'.join(keyword)
+		elif keyword[0] == 'mask':
+			layer_index = 'direct_globalMask'
 			keyword = 'ctrl_' + '_'.join(keyword)
 		else:
 			layer_index = keyword[0]
