@@ -644,7 +644,7 @@ if type == 'OSC':
 		elif keyword[0] == 'mask':
 			layer_index = 0
 			keyword = 'direct_globalMask_' + '_'.join(keyword[1:])
-			print keyword
+			#print keyword
 		else:
 			layer_index = keyword[0].split('.')[1]
 			# support wildcard for instances
