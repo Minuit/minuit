@@ -610,9 +610,9 @@ https://github.com/Minuit/minuit</string>
 		<key>WINDOW_MINIMIZED</key>
 		<false/>
 		<key>WINDOW_X</key>
-		<real>1495</real>
+		<real>1373</real>
 		<key>WINDOW_Y</key>
-		<real>818</real>
+		<real>847</real>
 	</dict>
 	<key>SCRIPT_CLEANUP</key>
 	<string></string>
@@ -632,7 +632,7 @@ if type == 'OSC':
 	#this is an error
 	elif '!' in param['address']:
 		if print_minuit_input : print "MINUIT ERROR : ",  param['address'] , param['args']
-		print 'error'	
+		print 'error :' , 	param
 	#this is an OSC message
 	elif '/' == param['address'][0]:
 		if print_osc_input : print "OSC INPUT : ", param['address'] , param['args']
@@ -644,7 +644,6 @@ if type == 'OSC':
 		elif keyword[0] == 'mask':
 			layer_index = 0
 			keyword = 'direct_globalMask_' + '_'.join(keyword[1:])
-			#print keyword
 		else:
 			layer_index = keyword[0].split('.')[1]
 			# support wildcard for instances
@@ -658,7 +657,7 @@ if type == 'OSC':
 	#this is an answer (it won't be used for the 0.1 version of this module)
 	elif ':' in param['address']:
 		if print_minuit_input : print "MINUIT INPUT : ",  param['address'] , param['args']
-		print 'answer'		</string>
+		print 'answer is not supported in this version of this module'	</string>
 	<key>SCRIPT_INIT</key>
 	<string>from pprint import pprint
 
@@ -755,7 +754,7 @@ for keyword in modul8.getValue ('info_keywords',0) :
 			pass
 		else:
 			#iterate the ten layers
-			for layer_index in range(1,3):
+			for layer_index in range(1,11):
 				#make a nice name for each layer (layer.2)
 				layer_index = 'layer.' + str(layer_index)
 				#increment the priority
@@ -856,12 +855,14 @@ def oscquery (sender,query,node,args):
 			if len(m_node) == 1:
 				answer = [node , m_namespace['data'][m_node[0]]['attributes'][get_request]]
 			elif len(m_node) == 2:
-				print m_node
 				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['attributes'][get_request]]
 			elif len(m_node) == 3:
 				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['attributes'][get_request]]
 			elif len(m_node) == 4:
 				answer = [node , m_namespace['data'][m_node[0]]['data'][m_node[1]]['data'][m_node[2]]['data'][m_node[3]]['attributes'][get_request]]
+		#i-score doesn't support True or False, but 1 or 0
+		if answer[1] == True : answer[1] = 1
+		if answer[1] == False : answer[1] = 0
 		if print_minuit_output : print "MINUIT OUTPUT : ", address , answer
 		modul8.sendOSC(address,answer)
 	#this is a 'listen' query
@@ -881,25 +882,42 @@ def oscquery (sender,query,node,args):
 			keyword = 'ctrl_layer_' + '_'.join(keyword)
 		args = args[0]
 		data = keyword.split(':')[:1][0]
-		attribut = keyword.split(':')[1]
-		if args == 'enable':
-			#add m_node to 'm_listen' dictionary
-			m_listen.setdefault(layer_index,{})
-			m_listen[layer_index].update({data:attribut})
-		elif args == 'disable':
-			del m_listen[layer_index][data]</string>
+		# if request is '/' (root), clear the listen dict
+		if keyword == 'ctrl_layer_' :
+			pass
+		else:
+			attribut = keyword.split(':')[1]
+			if args == 'enable':
+				#add m_node to 'm_listen' dictionary
+				m_listen.setdefault(layer_index,{})
+				m_listen[layer_index].update({data:attribut})
+			elif args == 'disable':
+				del m_listen[layer_index][data]</string>
 	<key>SCRIPT_KEYWORDEVENT</key>
 	<string>#this is a master parameter
 if keyword.startswith ('ctrl_master') :	
+	#one line for listen function
+	layer_index = 'master'
 	#List of master controls
 	m_keyword = keyword.split('_')[2:]
-	#keyword = '/'.join(keyword)
 	m_keyword = m_keyword
-	print m_keyword
 	if len(m_keyword) == 1:
-		m_namespace['master']['data'][m_keyword[0]]['attributes']['value'] = param
+		m_namespace['data']['master']['data'][m_keyword[0]]['attributes']['value'] = param
 	if len(m_keyword) == 2:
-		m_namespace['master']['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
+		m_namespace['data']['master']['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
+#this is a mask parameter
+elif keyword.startswith ('direct_globalMask') :	
+	#one line for listen function
+	layer_index = 'mask'
+	#List of mask controls
+	m_keyword = keyword.split('_')[2:]
+	m_keyword = m_keyword
+	if len(m_keyword) == 1:
+		m_namespace['data']['mask']['data'][m_keyword[0]]['attributes']['value'] = param
+	if len(m_keyword) == 2:
+		m_namespace['data']['mask']['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
+	if len(m_keyword) == 3:
+		m_namespace['data']['mask']['data'][m_keyword[0]]['data'][m_keyword[1]]['data'][m_keyword[2]]['attributes']['value'] = param
 #this is a layer parameter
 elif keyword.startswith ('ctrl_layer') :
 	#these are not usefull in our case
@@ -915,18 +933,19 @@ elif keyword.startswith ('ctrl_layer') :
 		if len(m_keyword) == 2:
 			m_namespace['data'][layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['attributes']['value'] = param
 		elif len(m_keyword) ==3:
+			print m_keyword , param
 			m_namespace['data'][layer_index]['data'][m_keyword[0]]['data'][m_keyword[1]]['data'][m_keyword[2]]['attributes']['value'] = param
 
-#print layer_index , keyword
-if layer_index in m_listen.keys():
-	if keyword in m_listen[layer_index].keys():
+#Listen 
+if layer_index in m_listen.keys() :
+	if keyword in m_listen[layer_index].keys() :
 		if m_listen[layer_index][keyword] == 'value':
 			keyword = keyword.split('_')
 			keyword = keyword[2:]
 			keyword = '/'.join(keyword)
 			address = '/' + '/'.join([layer_index,keyword])
 			if print_osc_output : print "OSC OUTPUT : ",  address, param
-			modul8.sendOSC(address , param)
+			modul8.sendOSC('modul8:listen' , address , param)
 </string>
 	<key>SCRIPT_MESSAGE</key>
 	<string>#message from the module interface
