@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
-			"architecture" : "x64",
+			"revision" : 2,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -356,7 +356,7 @@
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u291000682"
+					"varname" : "u358001116"
 				}
 
 			}
