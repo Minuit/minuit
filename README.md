@@ -61,11 +61,13 @@ A:listen /WhereToListen:attribute value (each time the attribute change if the l
 ~~~
 
 ###Object types
-There are 4 types of objects : 
+There are 4 "standard" types of objects : 
 * **Application** : the root of the tree structure.
 * **Container** : a node of the tree structure which is not handling a value but provides features to manage the sub tree structure.
 * **Data** : a node a the tree structure which handles a value.
-* **none** : no object.
+* **none** : no object - this can be e.g. a parent node of a sub-tree, but the object in itself doens't provide any feature
+
+Apart from these 4 standard types, it is possible to define other, idiosyncratic and/or arbitrary types of objects, which will be processed as objects of type "none" in the standard implementations
 
 ###Data Attributes
 There are many attributes for the Data object. Here is a first overview :
